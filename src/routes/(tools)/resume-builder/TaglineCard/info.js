@@ -1,6 +1,5 @@
 let taglineDetails = {
-    tagline: "Crafting Code, Building Futures: Your Expert Software Developer!",
-    techSkills: ["Software Developer"],
-}
-
+    tagline: "",
+    techSkills: [""],
+  };
 export default taglineDetails;
