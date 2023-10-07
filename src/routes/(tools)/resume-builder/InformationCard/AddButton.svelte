@@ -1,13 +1,13 @@
-<div class="bg-gray-800 rounded-2xl p-5 font-bold max-w-md m-5"  >
-    <div class="flex justify-end">
-    
-    <button class="bg-gray-800 rounded-lg px-8 py-2 text-white inline-flex gap-2 items-center border-solid border-white border-2  shadow-white">
-      
-     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 ">
-  <path fill-rule="evenodd" d="M12 5.25a.75.75 0 01.75.75v5.25H18a.75.75 0 010 1.5h-5.25V18a.75.75 0 01-1.5 0v-5.25H6a.75.75 0 010-1.5h5.25V6a.75.75 0 01.75-.75z" clip-rule="evenodd" />
-</svg>
+<button
+	class="bg-gray-800 rounded-lg px-8 py-2 text-white inline-flex gap-2 items-center border-solid border-white border-2 shadow-white"
+>
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+		<path
+			fill-rule="evenodd"
+			d="M12 5.25a.75.75 0 01.75.75v5.25H18a.75.75 0 010 1.5h-5.25V18a.75.75 0 01-1.5 0v-5.25H6a.75.75 0 010-1.5h5.25V6a.75.75 0 01.75-.75z"
+			clip-rule="evenodd"
+		/>
+	</svg>
 
- Add
-     </button>
-    </div>
-  </div>
+	Add
+</button>
