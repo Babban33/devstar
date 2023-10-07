@@ -1,25 +1,25 @@
-<div class="bg-gray-800 p-">
-  <div class="w-16 md:w-32 lg:w-48">
-  <div class="flex rounded-2xl bg-gray-800 p-5 text-center text-sm text-white">
-    <div class="ml-3 rounded-full bg-white px-10 text-center">
-      edit-document
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" id="edit-document">
-        <path d="M8.793 14h22v2h-22zM8.793 20h22v2h-22zM8.793 26h17v2h-17zM8.793 32h12v2h-12zM8.793 38h12v2h-12z"></path>
-        <path d="M38.793 18.586v-10L31.207 1H.793v48h38V31.414L49.207 21l-6.414-6.414-4 4zm-1 3.828L41.379 26l-12 12h-3.586v-3.586l12-12zm-6-18L35.379 8h-3.586V4.414zm5 42.586h-34V3h27v7h7v10.586l-13 13V40h6.414l6.586-6.586V47zm6-22.414L39.207 21l3.586-3.586L46.379 21l-3.586 3.586z"></path>
-      </svg>
-    </div>
-    <div>
-      <div class="font-sans text-lg">Add Education Details</div>
-      <div class="mr-1 whitespace-nowrap px-7 py-11 font-sans text-lg text-slate-400">Your College/School</div>
-    </div>
-    <div class="ml-40 flex p-0 px-2 py-5">
-      <button class="mx-16 flex h-14 w-36 items-center rounded-md border-2 border-solid bg-transparent p-6 text-xl font-bold shadow-md">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="h-6 w-7 fill-white">
-          <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+<div class="flex items-center justify-between bg-blue-950 p-4">
+  <div class="flex items-center">
+    <div class="rounded-full bg-white p-4">
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
         </svg>
-        Add
-      </button>
+      </span>
+    </div>
+    <div class="ml-2">
+      <h1 class="inline text-base text-white">Add Education Details</h1>
+      <p class="text-sm text-gray-400">Your College/School</p>
     </div>
   </div>
+
+  <div class="flex items-center">
+    <button class="flex items-center rounded-lg border-2 border-white bg-transparent px-6 py-2 text-lg font-semibold text-white">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
+        <path fill-rule="evenodd" d="M12 5.25a.75.75 0 01.75.75v5.25H18a.75.75 0 010 1.5h-5.25V18a.75.75 0 01-1.5 0v-5.25H6a.75.75 0 010-1.5h5.25V6a.75.75 0 01.75-.75z" clip-rule="evenodd" />
+      </svg>
+
+      Add
+    </button>
   </div>
 </div>
