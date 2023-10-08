@@ -1,7 +1,10 @@
+<script>
+  import achievement from './achievement.js';
+</script>
 <div class="flex items-center justify-between rounded-2xl bg-gray-300 p-6">
     <div>
-      <h1 class="inline text-lg font-semibold">Achievement</h1>
-       <h1 class=" text-sm text-gray-500">Link (Optional)</h1>
+      <h1 class="inline text-lg font-semibold">{achievement.achieve}</h1>
+       <h1 class=" text-sm text-gray-500">{achievement.link} (Optional)</h1>
     </div>
     <div class="flex items-center">
       <button class="flex items-center rounded-lg border-2 border-black bg-transparent px-4 py-2 text-lg text-black">
