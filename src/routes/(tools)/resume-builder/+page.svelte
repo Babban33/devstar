@@ -1,6 +1,5 @@
 <script>
     import ProfileCard  from "./ProfileCard/ProfileCard.svelte";
-    import TaglineCard  from "./TaglineCard/TaglineCard.svelte";
     import InformationCard  from "./InformationCard/InformationCard.svelte";
 </script>
 <div>
@@ -15,6 +14,5 @@
         </div>
     </section>
     <ProfileCard/>
-    <TaglineCard/>
     <InformationCard/>
 </div>
