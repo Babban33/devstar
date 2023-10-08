@@ -1,6 +1,10 @@
+<script>
+  import certificate1 from "./certification";
+</script>
+
 <div class="flex items-center justify-between rounded-2xl bg-gray-400 p-4">
   <div>
-    <h1 class="inline text-lg font-semibold">Certificate Name<span class="text-base font-normal text-gray-500"> | link</span></h1>
+    <h1 class="inline text-lg font-semibold">{certificate1.certificate1.title}<span class="text-base font-normal text-gray-500"> | {certificate1.certificate1.link}</span></h1>
   </div>
   <div class="flex items-center">
     <button class="flex items-center rounded-lg border-2 border-black bg-transparent px-4 py-2 text-lg text-black">
