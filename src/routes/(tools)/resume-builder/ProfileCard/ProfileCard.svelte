@@ -1,54 +1,12 @@
-<div class="scroll-pl-28 rounded-md bg-gray-600 p-8 text-center font-sans text-3xl font-bold text-white">
-  <style>
-          #svg1 {
-      position: relative;
-      left: -109px;
-      top:10px;
-    }
-    #svg2 {
-      position: relative;
-      left: 125px;
-      top:-150px;
-    }
-  </style>
+<div class="bg-gray-400 flex p-4 rounded-xl justify-between">
   <div class="flex">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-28 w-28">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
-    </svg>
-    Username
-    <div class="flex translate-x-96 space-x-4">
-      <button class="mb-20 rounded-xl bg-gray-900 p-3 px-5 font-sans font-light text-white">Edit</button>
-      <button class="mb-20 rounded-xl bg-gray-900 p-3 px-5 font-sans font-light text-white">Download</button>
-    </div>
+    <img class="rounded-full border-2 w-24 h-24 mr-4" alt="Profile"/>
+    <h3>Username</h3>
   </div>
-</div>
-<div id="svg2">
-  <div class="rounded-2xl p-5 font-bold">
-    Designation1 | Designation2 | Designation3
-    <div style="display: flex; justify-content: around;">
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="48px" height="48px">
-        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="none" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
-          <path transform="scale(5.33333,5.33333)" d="M44,24c0,11.02793 -8.97207,20 -20,20c-11.02793,0 -20,-8.97207 -20,-20c0,-11.02793 8.97207,-20 20,-20c11.02793,0 20,8.97207 20,20z" id="strokeMainSVG" fill="#dddddd" stroke="#dddddd" stroke-linejoin="round"></path>
-          <g transform="scale(5.33333,5.33333)" fill="#000000" stroke="none" stroke-linejoin="miter"><path d="M24,4c-11.02793,0 -20,8.97207 -20,20c0,11.02793 8.97207,20 20,20c11.02793,0 20,-8.97207 20,-20c0,-11.02793 -8.97207,-20 -20,-20zM24,7c9.40662,0 17,7.59339 17,17c0,7.66536 -5.04306,14.12252 -12,16.25195v-5.11523c0,-1.91008 -1.10068,-3.5481 -2.69141,-4.36328c3.13805,-0.60035 5.72121,-2.3751 6.93703,-4.76606c1.21582,-2.39096 0.9149,-5.10432 -0.80812,-7.28668c0.44354,-1.36529 0.93902,-3.76003 -0.23828,-5.64453c-2.26987,0 -3.73455,1.55591 -4.43359,2.52344c-1.19501,-0.39258 -2.47379,-0.5962 -3.76562,-0.59961c-1.29267,0.00115 -2.5728,0.20278 -3.76953,0.59375c-0.70074,-0.96798 -2.16424,-2.51758 -4.42969,-2.51758c-1.35107,2.16264 -0.51586,4.48839 -0.06836,5.4375c-1.84039,2.17401 -2.23014,4.93209 -1.04286,7.37992c1.18727,2.44783 3.80041,4.27375 6.99208,4.88571c-1.30614,0.67319 -2.28436,1.89475 -2.58398,3.37695h-1.31445c-1.297,0 -1.80095,-0.52702 -2.50195,-1.41602c-0.692,-0.889 -1.43608,-1.48638 -2.33008,-1.73437c-0.482,-0.051 -0.80672,0.31563 -0.38672,0.64063c1.419,0.966 1.51694,2.54703 2.08594,3.58203c0.518,0.932 1.5793,1.77148 2.7793,1.77148h1.57031v3.25195c-6.95694,-2.12943 -12,-8.58659 -12,-16.25195c0,-9.40661 7.59339,-17 17,-17z"></path></g>
-        </g>
-      </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="53px" height="50px">
-        <g transform="translate(-14.08,-14.08) scale(1.11,1.11)">
-          <g fill="none" fill-rule="none" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
-            <g transform="scale(4,4)">
-              <path d="M37.5,27c3.59,0 6.5,2.91 6.5,6.5c0,0 0,4.79 0,7.179c0,0.729 -0.592,1.321 -1.321,1.321c-0.436,0 -0.921,0 -1.357,0c-0.73,0 -1.322,-0.592 -1.322,-1.321v-6.179c0,-1.925 -1.575,-3.5 -3.5,-3.5c-1.925,0 -3.5,1.575 -3.5,3.5c0,0 0,4.026 0,6.179c0,0.729 -0.592,1.321 -1.321,1.321c-0.436,0 -0.921,0 -1.357,0c-0.73,0 -1.322,-0.592 -1.322,-1.321c0,-2.843 0,-9.514 0,-12.357c0,-0.73 0.592,-1.322 1.321,-1.322c0.436,0 0.921,0 1.357,0c0.73,0 1.322,0.592 1.322,1.321v0.495c1.168,-1.122 2.752,-1.816 4.5,-1.816z" fill="#000000" fill-rule="nonzero"></path>
-              <path d="M25,28.34c0,2.847 0,9.474 0,12.321c0,0.739 -0.6,1.339 -1.34,1.339c-0.425,0 -0.896,0 -1.321,0c-0.739,0 -1.339,-0.6 -1.339,-1.34c0,-2.847 0,-9.474 0,-12.321c0,-0.739 0.6,-1.339 1.34,-1.339c0.425,0 0.896,0 1.321,0c0.739,0 1.339,0.6 1.339,1.34z" fill="#000000" fill-rule="nonzero"></path>
-              <path d="M23,20c1.104,0 2,0.896 2,2c0,1.104 -0.896,2 -2,2c-1.104,0 -2,-0.896 -2,-2c0,-1.104 0.896,-2 2,-2z" fill="#000000" fill-rule="evenodd"></path>
-              <path d="M32,54c-12.131,0 -22,-9.869 -22,-22c0,-12.131 9.869,-22 22,-22c12.131,0 22,9.869 22,22c0,12.131 -9.869,22 -22,22zM32,14c-9.925,0 -18,8.075 -18,18c0,9.925 8.075,18 18,18c9.925,0 18,-8.075 18,-18c0,-9.925 -8.075,-18 -18,-18z" fill="#060000" fill-rule="nonzero"></path>
-            </g>
-          </g>
-        </g>
-      </svg>
-      <svg fill="#000000" width="47px" height="47px" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
-        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-        <g id="SVGRepo_iconCarrier"><path d="M 27.9999 51.9063 C 41.0546 51.9063 51.9063 41.0781 51.9063 28 C 51.9063 14.9453 41.0312 4.0937 27.9765 4.0937 C 14.8983 4.0937 4.0937 14.9453 4.0937 28 C 4.0937 41.0781 14.9218 51.9063 27.9999 51.9063 Z M 27.9999 47.9219 C 16.9374 47.9219 8.1014 39.0625 8.1014 28 C 8.1014 16.9609 16.9140 8.0781 27.9765 8.0781 C 39.0155 8.0781 47.8983 16.9609 47.9219 28 C 47.9454 39.0625 39.0390 47.9219 27.9999 47.9219 Z M 27.9765 29.2890 C 28.3749 29.2890 28.8202 29.1250 29.2655 28.6797 L 39.6014 18.3437 C 39.3202 18.1094 38.6405 17.8750 37.6327 17.8750 L 18.2968 17.8750 C 17.3124 17.8750 16.6093 18.1094 16.3280 18.3437 L 26.6640 28.6797 C 27.1327 29.1484 27.5780 29.2890 27.9765 29.2890 Z M 23.3358 28.0469 L 15.1796 19.8906 C 15.0390 20.1250 14.9687 20.6875 14.9687 21.5078 L 14.9687 34.4922 C 14.9687 35.3125 15.0390 35.8984 15.2030 36.1797 Z M 32.5234 28.0469 L 40.6562 36.1797 C 40.8202 35.8984 40.8905 35.3125 40.8905 34.4922 L 40.8905 21.5078 C 40.8905 20.6875 40.8202 20.1250 40.7030 19.8906 Z M 27.9530 31.1406 C 27.1093 31.1406 26.4530 30.8359 25.5390 29.9922 L 24.7890 29.2890 L 16.3749 37.7031 C 16.6562 37.9609 17.3124 38.1250 18.2968 38.1250 L 37.6093 38.1250 C 38.5936 38.1250 39.2499 37.9609 39.5312 37.7031 L 31.1171 29.2890 L 30.3671 29.9922 C 29.4530 30.8359 28.7968 31.1406 27.9530 31.1406 Z"></path></g>
-      </svg>
-    </div>
+  <div>
+    <div class="gap-4">
+    <button class="rounded-xl bg-gray-900 px-4 py-2 font-sans font-light text-white" >Edit</button>
+    <button class="rounded-xl bg-gray-900 px-4 py-2 font-sans font-light text-white">Download</button>
+  </div>
   </div>
 </div>
