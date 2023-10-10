@@ -31,7 +31,7 @@
     <span class="text-center font-sans text-lg font-normal text-black">{Skills}</span>
   </span>
   {/each}
-  <h5 class="font-semibold text-2xl pb-2 text-gray-900">Software Skills</h5>
+  <h5 class="font-semibold text-2xl pb-2 text-gray-900">Soft Skills</h5>
   {#each taglineDetails.softSkills as Skills}
   <span class="rounded-full border-2 border-gray-950 px-2 inline-block mr-2 mb-1">
     <span class="text-center font-sans text-lg font-normal text-black">{Skills}</span>
