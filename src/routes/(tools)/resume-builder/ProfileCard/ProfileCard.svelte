@@ -1,5 +1,11 @@
-<script>
+<script lang="ts">
   import EditDownloadButton from "./EditDownloadButton.svelte";
+  let clickedButton = "Education";
+  let options = ["Education", "Work Experience", "Projects", "Achievements", "Certifications"];
+  let toggleOptions = (e: MouseEvent) => {
+    let text = (e.target as HTMLButtonElement).textContent;
+    if(text) clickedButton=text;
+  }
 </script>
 <div class="bg-gray-400 p-4 rounded-xl">
   <div class="flex justify-between mb-4">
@@ -18,10 +24,12 @@
     <EditDownloadButton/>
   </div>
   <div class="px-2 lg:flex justify-between">
-    <button>Education</button>
-    <button>Work Experience</button>
-    <button>Projects</button>
-    <button>Achievements</button>
-    <button>Certifications</button>
+    {#each options as option}
+    {#if option === clickedButton}
+    <button class="font-bold">{option}</button>
+    {:else}
+    <button on:click={toggleOptions}>{option}</button>
+    {/if}
+    {/each}
   </div>
 </div>
