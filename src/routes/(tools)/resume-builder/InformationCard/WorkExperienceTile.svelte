@@ -1,12 +1,19 @@
+<script>
+ import WorkExperience from './workExp';
+</script>
+
+  
+  
+
 <div class="bg-gray-800 p-5">
     <div class="bg-gray-400 rounded-2xl font-sans flex justify-between ">
        
          <div class="px-5 py-5 justify-start align-middle">
-           <div class=" font-bold pb-1 flex">Company name <p class="text-gray-600 font-medium"> | Job role | <span       class="italics">Link</span> </p>
+           <div class=" font-bold pb-1 flex">Company name {WorkExperience.workExp1.company_name}<p class="text-gray-600 font-medium"> | Job role | <span class="italics">Link</span> </p>
            </div>
           <div class="text-gray-600"> * </div>
           <div class="text-gray-600"> * </div>
-          <div class="text-gray-500">Start Date - End Date</div>
+          <div class="text-gray-500">{WorkExperience.workExp1.start_date} - {WorkExperience.workExp1.end_date}</div>
         </div>
 
         <div class="px-5 py-5">
