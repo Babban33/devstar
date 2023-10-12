@@ -14,7 +14,7 @@
   </div>
 
   <div class="flex items-center">
-    <button class="flex items-center rounded-lg border-2 border-gray-900 dark:border-white bg-transparent px-6 py-2 text-lg font-semibold text-gray-900 dark:text-white">
+    <button on:click={educationForm} class="flex items-center rounded-lg border-2 border-gray-900 dark:border-white bg-transparent px-6 py-2 text-lg font-semibold text-gray-900 dark:text-white">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
         <path fill-rule="evenodd" d="M12 5.25a.75.75 0 01.75.75v5.25H18a.75.75 0 010 1.5h-5.25V18a.75.75 0 01-1.5 0v-5.25H6a.75.75 0 010-1.5h5.25V6a.75.75 0 01.75-.75z" clip-rule="evenodd" />
       </svg>
@@ -22,3 +22,18 @@
     </button>
   </div>
 </div>
+
+
+<script>
+  
+  import Educationform from "./Educationform.svelte";
+  let isEditing = false
+  function educationForm(){
+    isEditing = !isEditing;
+  }
+  
+</script>
+
+{#if isEditing}
+<Educationform onSubmit={educationForm}  onCancel={educationForm}/>
+{/if}
