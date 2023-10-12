@@ -1,19 +1,24 @@
-<div class="relative flex rounded-2xl bg-gray-400 font-sans">
-  <div class="flex-grow">
-    <div class="justify-start px-5 py-5 align-middle">
-      <div class="pb-1 font-bold">Projects</div>
-      <div class="pb-1 text-gray-900">
-        Name | <a href="#" class="text-gray-600">Link</a>
-        <div class="text-gray-500">Description</div>
-      </div>
+<script>
+  import projects from "./projects";
+</script>
+<form id="projectform" class="relative flex w-3/4 flex-col rounded-3xl border-2 border-gray-100 p-6 shadow-2xl sm:w-2/3 lg:w-1/2 xl:w-1/3 bg-white">
+  <div class="mb-4 text-left text-xl font-bold">Projects Details</div>
+  <div class="flex">
+    <div class="mr-4 flex-grow sm:mr-8">
+      <label for="projectname" class="mb-1 block font-bold text-gray-900">Project Name</label>
+      <input type="text" id="projectname" name="projectname" class="sm:w-2/ w-full rounded-xl border border-gray-600 px-3 py-2" bind:value="{projects.project1.name}" placeholder="Enter project name" />
+    </div>
+    <div class="ml-4 flex-grow sm:ml-8">
+      <label for="projectlink" class="mb-1 block font-bold text-gray-900">Project Link</label>
+      <input type="text" id="projectlink" name="projectlink" class="w-full rounded-xl border border-gray-600 px-3 py-2" bind:value="{projects.project1.link}" placeholder="Enter project link" />
     </div>
   </div>
-  <div class="relative left-0 top-20 -translate-x-1/2 -translate-y-1/2 transform">
-    <button class="flex items-center rounded-xl border border-gray-800 p-1 pl-3 pr-3 font-medium">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="mr-2 h-4 w-4">
-        <path d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32L19.513 8.2z" />
-      </svg>
-      <span>Edit</span>
-    </button>
+  <div class="mt-4 flex-grow sm:mt-8">
+    <label for="projectdesc" class="mb-1 block font-bold text-gray-900">Project Description</label>
+    <textarea id="projectdesc" name="projectdesc" class="w-full rounded-xl border border-gray-600 px-3 py-2" rows="2" bind:value="{projects.project1.description1}" placeholder="Enter your description"></textarea>
   </div>
-</div>
+  <div class="mt-6 flex justify-end sm:mt-8">
+    <button type="button" id="closebutton" class="mr-4 px-4 py-2 font-thin text-black">Close</button>
+    <button type="submit" class="rounded-xl border border-gray-800 bg-gray-900 p-1 px-6 py-2 font-thin text-white">Done</button>
+  </div>
+</form>
