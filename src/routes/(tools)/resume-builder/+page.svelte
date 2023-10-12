@@ -1,4 +1,5 @@
 <script>
+    import AddButton from  "./InformationCard/InformationCard.svelte";
     import ProfileCard  from "./ProfileCard/ProfileCard.svelte";
     import TaglineCard  from "./TaglineCard/TaglineCard.svelte";
     import InformationCard  from "./InformationCard/InformationCard.svelte";
@@ -17,4 +18,6 @@
     <ProfileCard/>
     <TaglineCard/>
     <InformationCard/>
+    <AddButton/>
+    
 </div>
