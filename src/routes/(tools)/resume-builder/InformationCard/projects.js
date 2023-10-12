@@ -1,9 +1,9 @@
 let project1 = {
     name: " ",
-    tech_used :[" "],
+    tech_used :" ",
     description1: "",
     description2: "",
-
+    link: " ",
 }
 
 let project2 = {
@@ -11,7 +11,7 @@ let project2 = {
     tech_used :[" "],
     description1: "",
     description2: "",
-
+    link: " ",
 }
 
 export default { project1,project2};
