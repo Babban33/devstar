@@ -4,7 +4,7 @@
     isEditing = !isEditing;
   }
 </script>
-<div class="flex items-center justify-between bg-blue-950 p-4">
+<div class="flex items-center justify-between p-4">
   <div class="flex items-center">
     <div class="rounded-full bg-white p-4">
       <span>
