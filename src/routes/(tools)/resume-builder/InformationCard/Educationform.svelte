@@ -1,5 +1,5 @@
 <div  class="rounded-lg ">
-<form on:submit{} id="projectform" class="relative flex w-3/4 flex-col rounded-3xl border-2 border-gray-100 p-6 shadow-2xl sm:w-2/3 lg:w-1/2 xl:w-1/3">
+<form on:submit{} id="projectform" class="rounded-lg relative bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10">
     <div class="mb-4 text-left text-xl font-bold">Education Details</div>
     <div class="flex">
       <div class="mr-4 flex-grow sm:mr-8">
