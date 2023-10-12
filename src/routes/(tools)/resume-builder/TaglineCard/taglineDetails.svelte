@@ -1,5 +1,5 @@
 <script>
-  import taglineDetails from "./info";
+  import taglineDetails from "./info.json";
   import TaglineForm from "./TaglineForm.svelte";
   let isEditing = false
   function toggleForm(){
@@ -13,8 +13,10 @@
     taglineDetails.techSkills = updatedDetails.techSkills;
     taglineDetails.softSkills = updatedDetails.softSkills;
   }
+  import Sample from "./sample.svelte";
 </script>
 <div class="w-auto rounded-2xl bg-gray-400 p-5 text-gray-900">
+  <Sample/>
   <div class="flex items-center justify-between">
     <h5 class="font-serif text-2xl font-semibold">Tagline</h5>
     <button on:click={toggleForm} class="inline-flex items-center gap-2 text-md font-sans rounded-xl bg-gray-900 px-4 py-2 text-white font-light">
