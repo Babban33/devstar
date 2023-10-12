@@ -1,5 +1,5 @@
 <script>
-  import taglineDetails from "./info";
+  import taglineDetails from "./info.json";
   import TaglineForm from "./TaglineForm.svelte";
   let isEditing = false
   function toggleForm(){
