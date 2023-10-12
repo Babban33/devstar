@@ -1,4 +1,9 @@
-<div class="block p-6 max-w-sm
-            bg-green-600 rounded-lg 
-            border border-grey-200 shadow-md">
-</div>
+<script lang="ts">
+    import EducationFrame from "./EducationFrame.svelte";
+    import CollegeTileText from "./CollegeTileText.svelte";
+    import selectedButton from "../ProfileCard/ProfileCard.svelte";
+    import WorkExperienceMiddleTile from "./WorkExperienceMiddleTile.svelte";
+	import WorkExperienceTile from "./WorkExperienceTile.svelte";
+</script>
+<EducationFrame/>
+<CollegeTileText/>
