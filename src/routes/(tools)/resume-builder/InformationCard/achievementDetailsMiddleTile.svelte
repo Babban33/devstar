@@ -1,3 +1,12 @@
+<script>
+  import AchievementsForm from "./AchievementsForm.svelte";
+  let isEditing=false
+  function toggleForm()
+  {
+    isEditing=!isEditing;
+  }
+</script>
+
 <div class="flex items-center justify-between p-4">
     <div class="flex items-center">
       <div class="rounded-full bg-white p-3">
@@ -14,7 +23,7 @@
     </div>
   
     <div class="flex items-center">
-      <button class="flex items-center rounded-lg border-2 border-white bg-transparent px-6 py-2 text-lg font-semibold text-white">
+      <button on:click={toggleForm} class="flex items-center rounded-lg border-2 border-white bg-transparent px-6 py-2 text-lg font-semibold text-white">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
           <path fill-rule="evenodd" d="M12 5.25a.75.75 0 01.75.75v5.25H18a.75.75 0 010 1.5h-5.25V18a.75.75 0 01-1.5 0v-5.25H6a.75.75 0 010-1.5h5.25V6a.75.75 0 01.75-.75z" clip-rule="evenodd" />
         </svg>
@@ -23,4 +32,8 @@
       </button>
     </div>
   </div>
-  
+  {#if isEditing}
+<AchievementsForm/>
+{/if}
+
+ 
