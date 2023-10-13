@@ -1,16 +1,17 @@
-<script>
-  import achievement from './achievement.js';
+<script lang="ts">
   import AchievementsForm from './AchievementsForm.svelte';
   let isEditing=false;
   function toggleForm()
   {
     isEditing=!isEditing;
   }
+  export let achieve: string;
+  export let link : string;
 </script>
-<div class="flex items-center justify-between rounded-2xl bg-gray-300 p-6">
+<div class="flex items-center justify-between rounded-2xl bg-gray-300 p-6 mb-2">
   <div>
-    <h1 class="inline text-lg font-semibold">{achievement.achieve}</h1>
-     <h1 class=" text-sm text-gray-500">{achievement.link} (Optional)</h1>
+    <h1 class="inline text-lg font-semibold">{achieve}</h1>
+     <h1 class=" text-sm text-gray-500">{link} (Optional)</h1>
   </div>
   <div class="flex items-center">
     <button on:click={toggleForm} class="flex items-center rounded-lg border-2 border-black bg-transparent px-4 py-2 text-lg text-black">
