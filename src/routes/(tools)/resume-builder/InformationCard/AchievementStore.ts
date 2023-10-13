@@ -1,4 +1,7 @@
 import { writable } from 'svelte/store';
-
-export const achievementStore = writable([
-]);
+interface Achievement {
+    id: number;
+    achievementName: string;
+    achievementLink: string;
+  }
+export const achievementStore = writable<Achievement[]>([]);
