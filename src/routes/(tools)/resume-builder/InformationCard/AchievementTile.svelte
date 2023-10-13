@@ -11,7 +11,9 @@
 <div class="flex items-center justify-between rounded-2xl bg-gray-300 p-6 mb-2">
   <div>
     <h1 class="inline text-lg font-semibold">{achieve}</h1>
-     <h1 class=" text-sm text-gray-500">{link} (Optional)</h1>
+    {#if link !== ""}
+      <a class=" text-sm text-gray-500 " href="{link}" target="_blank">Link</a>
+    {/if}
   </div>
   <div class="flex items-center">
     <button on:click={toggleForm} class="flex items-center rounded-xl border-2 border-gray-800 p-1 pl-3 pr-3 font-medium">
