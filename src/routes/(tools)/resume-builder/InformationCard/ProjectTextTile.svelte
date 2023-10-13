@@ -27,5 +27,5 @@
   </div>
 </div>
 {#if isEditing}
-<Projectform onSubmit={toggleForm}/>
+<Projectform onSubmit={toggleForm} onCancel={toggleForm}/>
 {/if}
