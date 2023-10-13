@@ -18,7 +18,8 @@
   </div>
 </div>
 
-<script>
+<script >
+import {educationStore} from "./eduDetails"
   
   import Educationform from "./Educationform.svelte";
   let isEditing = false

@@ -1,5 +1,5 @@
 <div  class="rounded-lg ">
-<form on:submit{} id="projectform" class="rounded-lg relative bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10">
+<form on:submit{formSubmit} id="projectform" class="rounded-lg relative bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10">
     <div class="mb-4 text-left text-xl font-bold">Education Details</div>
     <div class="flex">
       <div class="mr-4 flex-grow sm:mr-8">
@@ -33,7 +33,7 @@
     </div>
     <div class="mt-6 flex justify-end sm:mt-8">
       <button type="button" id="closebutton" on:click={onCancel} class="mr-4 px-4 py-2 font-thin text-black">Close</button>
-      <button type="submit" class="rounded-xl border border-gray-800 bg-gray-900 p-1 px-6 py-2 font-thin text-white">Done</button>
+      <button type="submit" on:click={onSubmit} class="rounded-xl border border-gray-800 bg-gray-900 p-1 px-6 py-2 font-thin text-white">Done</button>
     </div>
   </form>
   </div>
@@ -44,7 +44,9 @@
 
   
   export let onSubmit;
-
+  function formSubmit(){
+    onSubmit();
+  }
   
   export let updatedProfileform;
 
