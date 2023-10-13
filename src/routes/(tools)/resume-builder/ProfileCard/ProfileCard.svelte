@@ -1,10 +1,12 @@
 <script lang="ts">
   import EditDownloadButton from "./EditDownloadButton.svelte";
-  let clickedButton = "Education";
+  import { clickedBtn } from "./ClickedButton";
   let options = ["Education", "Work Experience", "Projects", "Achievements", "Certifications"];
   let toggleOptions = (e: MouseEvent) => {
     let text = (e.target as HTMLButtonElement).textContent;
-    if(text) clickedButton=text;
+    if(text){
+      $clickedBtn=text;
+    }
   }
 </script>
 <div class="bg-gray-400 p-4 rounded-xl">
@@ -25,7 +27,7 @@
   </div>
   <div class="px-2 lg:flex justify-between">
     {#each options as option}
-    {#if option === clickedButton}
+    {#if option === $clickedBtn}
     <button class="font-bold">{option}</button>
     {:else}
     <button on:click={toggleOptions}>{option}</button>
