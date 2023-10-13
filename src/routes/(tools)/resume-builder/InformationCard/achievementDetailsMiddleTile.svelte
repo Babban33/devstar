@@ -33,7 +33,7 @@
     </div>
   </div>
   {#if isEditing}
-<AchievementsForm/>
+<AchievementsForm onSubmit={toggleForm} onCancel={toggleForm}/>
 {/if}
 
  
