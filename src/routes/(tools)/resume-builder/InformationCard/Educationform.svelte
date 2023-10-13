@@ -1,5 +1,20 @@
-<div  class="rounded-lg ">
-<form on:submit{formSubmit} id="projectform" class="rounded-lg relative bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10">
+<script>
+  /**
+	 * @type {() => void}
+	 */
+  export let onSubmit;
+  function formSubmit(){
+    onSubmit();
+  }
+  /**
+	 * @type {() => void}
+	 */
+  export let onCancel;
+  function closeForm(){
+    onCancel();
+  }
+</script>
+<form on:submit={formSubmit} id="educationform" class="rounded-lg relative bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10">
     <div class="mb-4 text-left text-xl font-bold">Education Details</div>
     <div class="flex">
       <div class="mr-4 flex-grow sm:mr-8">
@@ -32,33 +47,7 @@
       </div>
     </div>
     <div class="mt-6 flex justify-end sm:mt-8">
-      <button type="button" id="closebutton" on:click={onCancel} class="mr-4 px-4 py-2 font-thin text-black">Close</button>
-      <button type="submit" on:click={onSubmit} class="rounded-xl border border-gray-800 bg-gray-900 p-1 px-6 py-2 font-thin text-white">Done</button>
+      <button type="button" id="closebutton" on:click={closeForm} class="mr-4 px-4 py-2 font-thin text-black">Close</button>
+      <button type="submit" class="rounded-xl border border-gray-800 bg-gray-900 p-1 px-6 py-2 font-thin text-white">Done</button>
     </div>
   </form>
-  </div>
-  
-
-  <script>
-  
-
-  
-  export let onSubmit;
-  function formSubmit(){
-    onSubmit();
-  }
-  
-  export let updatedProfileform;
-
-  let yourname = '';
-  let designation = '';
-  let githublink = '';
-  let linkedinlink = '';
-  let gmail = '';
-
-  
-  export let onCancel;
-  const handleCancel = () => {
-    onCancel();
-  }
-</script>
