@@ -6,6 +6,7 @@
 
  let  certificate2 = {
     title : " ",
+    organisation : " ",
     link: " ",
  }
 
