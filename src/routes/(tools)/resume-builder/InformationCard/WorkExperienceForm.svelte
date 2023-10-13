@@ -1,5 +1,14 @@
-<div class=" rounded-lg  " >
-    <form class=" rounded-lg relative bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10" > 
+<script>
+  /**
+	 * @type {() => void}
+	 */
+  export let onSubmit;
+  function formSubmit(){
+    onSubmit();
+  }
+</script>
+ 
+    <form on:click={formSubmit} class=" rounded-lg relative bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10" > 
       <div class="text-3xl  "> Work Experience</div>
          <div>
     
@@ -51,4 +60,4 @@
          </div>
     </form>
  
-   </div>
+   

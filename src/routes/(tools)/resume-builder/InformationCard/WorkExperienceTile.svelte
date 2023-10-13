@@ -27,5 +27,5 @@
       
   </div>
   {#if IsEditing}
-<WorkExperienceForm/>
+<WorkExperienceForm onSubmit={toogleform}/>
 {/if}

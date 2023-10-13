@@ -1,7 +1,14 @@
 <script>
   import projects from "./projects";
+  /**
+	 * @type {() => void}
+	 */
+  export let onSubmit;
+  function formSubmit(){
+       onSubmit();
+  }
 </script>
-<form id="projectform" class="relative flex w-3/4 flex-col rounded-3xl border-2 border-gray-100 p-6 shadow-2xl sm:w-2/3 lg:w-1/2 xl:w-1/3 bg-white">
+<form on:submit={formSubmit} id="projectform" class="relative flex w-3/4 flex-col rounded-3xl border-2 border-gray-100 p-6 shadow-2xl sm:w-2/3 lg:w-1/2 xl:w-1/3 bg-white">
   <div class="mb-4 text-left text-xl font-bold">Projects Details</div>
   <div class="flex">
     <div class="mr-4 flex-grow sm:mr-8">
