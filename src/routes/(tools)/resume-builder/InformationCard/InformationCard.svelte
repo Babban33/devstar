@@ -24,7 +24,7 @@
 {:else if $clickedBtn === "Achievements"}
     <AchievementDetailsMiddleTile/>
     {#if $achievementStore.length > 0}
-        {#each $achievementStore as {achievementName, achievementLink} (achievementName)}
+        {#each $achievementStore as {id, achievementName, achievementLink} (id)}
         <AchievementTile achieve={achievementName} link={achievementLink}/>
         {/each}
     {/if}
