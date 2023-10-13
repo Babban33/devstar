@@ -10,6 +10,7 @@
     import AchievementTile from "./AchievementTile.svelte";
     import CertificationDetailsMiddleTile from "./certificationDetailsMiddleTile.svelte";
     import CertficationTile from "./CertficationTile.svelte";
+    import { achievementStore } from "./AchievementStore";
 </script>
 {#if $clickedBtn ==="Education"}
     <EducationFrame/>
@@ -22,7 +23,11 @@
     <ProjectTextTile/>
 {:else if $clickedBtn === "Achievements"}
     <AchievementDetailsMiddleTile/>
-    <AchievementTile/>
+    {#if $achievementStore.length > 0}
+        {#each $achievementStore as {achievementName, achievementLink} (achievementName)}
+        <AchievementTile achieve={achievementName} link={achievementLink}/>
+        {/each}
+    {/if}
 {:else if $clickedBtn === "Certifications"}
     <CertificationDetailsMiddleTile/>
     <CertficationTile/>
