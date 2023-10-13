@@ -22,7 +22,3 @@
     </div>
     <div class="m-5 max-w-md rounded-2xl bg-gray-800 p-5 font-bold"></div>
 </div>
-
-<script>
-
-</script>
