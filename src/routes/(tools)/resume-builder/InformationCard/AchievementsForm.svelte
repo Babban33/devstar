@@ -1,11 +1,16 @@
 <script>
-  import achievements from "./achievement";
+  import { achievementStore } from "./AchievementStore";
+  let achievements={achievementName :" ", achievementLink: " "}
   /**
 	 * @type {() => void}
 	 */
   export let onSubmit;
   function formSubmit(){
     onSubmit();
+    achievementStore.update(items => {
+      return [...items, {id: $achievementStore.length, achievementName: achievements.achievementName, achievementLink: achievements.achievementLink}];
+    });
+    console.log($achievementStore.length);
   }
   /**
 	 * @type {() => void}
@@ -23,12 +28,12 @@
       
       <div class="flex-grow sm:mt-8">
         <label for="projectdesc" class="mb-1 block font-bold text-gray-900">Description</label>
-        <textarea id="projectdesc" name="projectdesc" class="w-full rounded-xl border border-gray-600 px-3 py-2" rows="2" bind:value="{achievements.achieve}" placeholder="Enter your description"></textarea>
+        <textarea id="projectdesc" name="projectdesc" class="w-full rounded-xl border border-gray-600 px-3 py-2" rows="2" bind:value="{achievements.achievementName}" placeholder="Enter your description"></textarea>
       </div>
       <div class="flex-1">
         <div class="ml-4 flex-grow-0 sm:ml-0">
           <label for="projectlink" class="mb-1 block font-bold text-gray-900">Link (Optional)</label>
-          <input type="text" id="projectlink" name="projectlink" class="w-full rounded-xl border border-gray-600 px-3 py-2" bind:value="{achievements.link}" placeholder="Enter project link" />
+          <input type="text" id="projectlink" name="projectlink" class="w-full rounded-xl border border-gray-600 px-3 py-2" bind:value="{achievements.achievementLink}" placeholder="Enter project link" />
         </div>
       </div>
       <div class="mt-6 flex justify-end sm:mt-8">
