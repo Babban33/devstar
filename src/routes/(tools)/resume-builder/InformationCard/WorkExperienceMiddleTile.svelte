@@ -31,5 +31,5 @@
   </div>
 </div>
 {#if IsAdd}
-<WorkExperienceForm/>
+<WorkExperienceForm onSubmit={toogleform}/>
 {/if}
