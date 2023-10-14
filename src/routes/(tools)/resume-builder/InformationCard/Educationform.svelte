@@ -14,6 +14,33 @@
     onCancel();
   }
 </script>
+
+
+
+<style>
+  .form-upper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    backdrop-filter: blur(3px);
+  }
+  .form-container {
+    background-color: transparent;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    /* box-shadow: 0 25px 50px -12px rgba(99, 99, 99, 0.25); */
+  }
+</style>
+
+<div class="form-upper">
+  <div class="form-container">
 <form on:submit={formSubmit} id="educationform" class="rounded-lg relative bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10">
     <div class="mb-4 text-left text-xl font-bold">Education Details</div>
     <div class="flex">
@@ -51,3 +78,5 @@
       <button type="submit" class="rounded-xl border border-gray-800 bg-gray-900 p-1 px-6 py-2 font-thin text-white">Done</button>
     </div>
   </form>
+  </div>
+  </div>
