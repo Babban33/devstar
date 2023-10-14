@@ -1,5 +1,5 @@
 <script>
-	import CertificationForm from "./certificationForm.svelte";
+	import CertificationForm from "./CertificationForm.svelte";
 	let isEditing=false
 	function toggleForm()
 	{
@@ -55,5 +55,5 @@
 	</div>
 </div>
 {#if isEditing}
-<certificationForm onSubmit={toggleForm}/>
+<CertificationForm onSubmit={toggleForm}/>
 {/if}
