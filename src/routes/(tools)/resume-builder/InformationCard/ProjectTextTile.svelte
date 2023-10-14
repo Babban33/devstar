@@ -1,5 +1,5 @@
 <script>
-  import projects from "./projects";
+  import {projectStore} from "./projectStore";
   import Projectform from "./projectform.svelte";
   let isEditing=false
   function toggleForm()
@@ -10,10 +10,10 @@
 <div class="relative flex rounded-2xl bg-gray-400 font-sans">
   <div class="flex-grow">
     <div class="justify-start px-5 py-5 align-middle">
-      <div class="pb-1 font-bold">Projects</div>
+      <div class="pb-1 font-bold">{$projectStore.name}</div>
       <div class="pb-1 text-gray-900">
-        Name | <a href="#" class="text-gray-600">Link</a>
-        <div class="text-gray-500">Description</div>
+        | <a href="#" class="text-gray-600">{$projectStore.link}</a>
+        <div class="text-gray-500">{$projectStore.description1}</div>
       </div>
     </div>
   </div>
