@@ -97,7 +97,7 @@ export let tools = {
     },
     'resume-builder': {
         name: 'Resume Builder',
-        icon: 'file',
+        icon: 'files',
         link: '/resume-builder',
         description: "The Resume Builder is a powerful tool that enables developers to create professional resumes effortlessly. With an intuitive interface, you can easily generate a resume by filling in your personal information, work experience, education, skills, and more. This tool eliminates the need for manual formatting and enables developers to create a visually appealing resume in minutes."
     },
