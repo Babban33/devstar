@@ -3,12 +3,12 @@ import{
   } from "svelte/store";
 
 
-  interface certificate {
+  interface Certificate {
     link:string,
     title: string,
   };
 
-  export const Certificationstore = writable<certificate>( {
+  export const Certificationstore = writable<Certificate>( {
     link:"url",
     title:"certificate"
   })
