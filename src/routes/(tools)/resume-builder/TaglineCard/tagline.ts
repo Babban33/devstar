@@ -1,9 +1,13 @@
 import { writable } from 'svelte/store';
 
-let data = {
-    tagline: "",
-    techSkills: [""],
-    softSkills: [""]
+interface Details {
+    tagline: string;
+    techSkills: string[];
+    softSkills: string[];
 }
 
-export default writable(data);
+export const taglineStore = writable<Details>({
+    tagline: '',
+    techSkills: [],
+    softSkills: [],
+});
