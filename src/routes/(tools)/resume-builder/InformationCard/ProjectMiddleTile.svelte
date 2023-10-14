@@ -1,8 +1,11 @@
 <script>
+
+  import Projectform from "./projectform.svelte";
   let isEditing = false;
   function toggleForm(){
     isEditing = !isEditing;
   }
+ 
 </script>
 <div class="flex items-center justify-between p-4">
   <div class="flex items-center">
@@ -28,3 +31,6 @@
     </button>
   </div>
 </div>
+{#if isEditing}
+<Projectform onSubmit={toggleForm} onCancel={toggleForm}/>
+{/if}

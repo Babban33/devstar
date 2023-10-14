@@ -1,5 +1,5 @@
 <script>
-  import taglineDetails from "./info.json";
+  import { taglineStore } from "./tagline";
   import TaglineForm from "./TaglineForm.svelte";
   let isEditing = false
   function toggleForm(){
@@ -9,9 +9,9 @@
 	 * @param {{ tagline: string; techSkills: string[]; softSkills: string[]; }} updatedDetails
 	 */
   function updateTaglineDetails(updatedDetails) {
-    taglineDetails.tagline = updatedDetails.tagline;
-    taglineDetails.techSkills = updatedDetails.techSkills;
-    taglineDetails.softSkills = updatedDetails.softSkills;
+    taglineStore.update(value => {
+      return {...value, ...updatedDetails};
+    });
   }
 </script>
 <div class="w-auto rounded-2xl bg-gray-400 p-5 text-gray-900">
@@ -24,19 +24,25 @@
       Edit
     </button>
   </div>
-  <p class="place-items-center pb-4 pt-2 font-sans text-white font-normal font-">{taglineDetails.tagline}</p>
-  <h5 class="font-semibold text-2xl pb-2 text-gray-900 font-serif">Technical Skills</h5>
-  {#each taglineDetails.techSkills as Skills}
-  <span class="rounded-full border-2 border-gray-950 px-2 inline-block mr-2 mb-1">
-    <span class="text-center font-sans text-lg font-normal text-black">{Skills}</span>
-  </span>
-  {/each}
-  <h5 class="font-semibold text-2xl pb-2 text-gray-900 font-serif">Soft Skills</h5>
-  {#each taglineDetails.softSkills as Skills}
-  <span class="rounded-full border-2 border-gray-950 px-2 inline-block mr-2 mb-1">
-    <span class="text-center font-sans text-lg font-normal text-black">{Skills}</span>
-  </span>
-  {/each}
+  <p class="place-items-center pb-4 pt-2 font-sans text-white font-normal font-">{$taglineStore.tagline}</p>
+  
+  {#if $taglineStore.techSkills.length > 0}
+    <h5 class="font-semibold text-2xl pb-2 text-gray-900 font-serif">Technical Skills</h5>
+    {#each $taglineStore.techSkills as Skills}
+    <span class="rounded-full border-2 border-gray-950 px-2 inline-block mr-2 mb-1">
+      <span class="text-center font-sans text-lg font-normal text-black">{Skills}</span>
+    </span>
+    {/each}
+  {/if}
+  
+  {#if $taglineStore.softSkills.length > 0}
+    <h5 class="font-semibold text-2xl pb-2 text-gray-900 font-serif">Soft Skills</h5>
+    {#each $taglineStore.softSkills as Skills}
+    <span class="rounded-full border-2 border-gray-950 px-2 inline-block mr-2 mb-1">
+      <span class="text-center font-sans text-lg font-normal text-black">{Skills}</span>
+    </span>
+    {/each}
+  {/if}
 </div>
 {#if isEditing}
 <TaglineForm onSubmit={toggleForm} updatedTaglineCard={updateTaglineDetails} onCancel={toggleForm}/>

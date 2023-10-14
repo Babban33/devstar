@@ -1,17 +1,14 @@
 <script>
-  import certificates from "./certificate";
   import CertificationForm from "./certificationForm.svelte";
-
-  let isEditing=false
-  function toggleForm()
-  {
-    isEditing=!isEditing;
+  let isEditing= false;
+  function toggleForm() {
+    isEditing=!isEditing
   }
 </script>
 
 <div class="flex items-center justify-between rounded-2xl bg-gray-400 p-4">
   <div>
-    <h1 class="inline text-lg font-semibold">{certificates.certificates.title}<span class="text-base font-normal text-gray-500"> | <a href="{certificates.certificates.link}">Link</a></span></h1>
+    <h1 class="inline text-lg font-semibold">Title<span class="text-base font-normal text-gray-500"> | <a href="www.devstar.com">Link</a></span></h1>
   </div>
   <div class="flex items-center">
     <button  on:click={toggleForm} class="flex items-center rounded-lg border-2 border-black bg-transparent px-4 py-2 text-lg text-black">

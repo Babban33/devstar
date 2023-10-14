@@ -5,10 +5,18 @@
   export let onSubmit;
   function formSubmit(){
     onSubmit();
+
+  }
+  /**
+	 * @type {() => void}
+	 */
+  export let onCancel;
+  function closeForm(){
+    onCancel();
   }
 </script>
  
-    <form on:click={formSubmit} class=" rounded-lg relative bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10" > 
+    <form on:submit={formSubmit} class=" rounded-lg relative bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10" > 
       <div class="text-3xl  "> Work Experience</div>
          <div>
     
@@ -50,7 +58,7 @@
  
          <div class="text-right py-8">
            
-           <button type="button" id="closebutton" class="mr-4 px-4 py-2 font-thin text-black">Cancel</button>
+           <button on:click={closeForm} type="button" id="closebutton" class="mr-4 px-4 py-2 font-thin text-black">Cancel</button>
  
            <button type="submit" class="rounded-xl border border-gray-800 bg-gray-900 p-1 px-6 py-2 font-thin text-white">Done</button>
  
