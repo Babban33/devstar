@@ -20,5 +20,5 @@
   </div>
 </div>  
 {#if isEditing}
-<certificationForm/>
+<certificationForm onSubmit={toggleForm} onCancel={toggleForm}/>
 {/if}
