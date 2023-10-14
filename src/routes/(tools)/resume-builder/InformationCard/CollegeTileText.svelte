@@ -1,4 +1,5 @@
 <script lang="ts">
+import {EducationStore} from "./EducationStore";
   import Educationform from "./Educationform.svelte";
   let isEditing=false;
   function toggleForm()
@@ -9,10 +10,10 @@
 <div class="relative flex rounded-2xl bg-gray-400 font-sans">
   <div class="flex-grow">
     <div class="justify-start px-5 py-5 align-middle">
-      <div class="pb-1 font-bold">College Name, City</div>
+      <div class="pb-1 font-bold">{$EducationStore.college_name}, {$EducationStore.city}</div>
       <div class="pb-1 text-gray-800">
-        Degree | CGPA:
-        <div class="text-gray-500">Start Year - End year</div>
+        {$EducationStore.degree} | CGPA:{$EducationStore.CGPA}
+        <div class="text-gray-500">{$EducationStore.start_year} -  {$EducationStore.end_year}</div>
       </div>
     </div>
   </div>
