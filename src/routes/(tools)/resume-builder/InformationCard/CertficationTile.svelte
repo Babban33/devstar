@@ -1,5 +1,6 @@
 <script>
-  import CertificationForm from "./certificationForm.svelte";
+
+  import CertificationForm from "./CertificationForm.svelte";
   let isEditing= false;
   function toggleForm() {
     isEditing=!isEditing
