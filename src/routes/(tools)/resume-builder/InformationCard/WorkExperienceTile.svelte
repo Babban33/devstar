@@ -1,19 +1,25 @@
-<script>
- import WorkExperience from "./workExp";
+<script lang="ts">
+ import { WorkExpStore } from "./workExp";
  import WorkExperienceForm from "./WorkExperienceForm.svelte";
  let IsEditing=false;
  function toogleform(){
   IsEditing=!IsEditing;
  }
+ export let companyName:string;
+ export let role:string;
+ export let point1:string;
+  export let point2:string;
+  export let startDate:string;
+  export let endDate:string;
 </script>
     <div class="bg-gray-400 rounded-2xl font-sans flex justify-between ">
        
          <div class="px-5 py-5 justify-start align-middle">
-           <div class=" font-bold pb-1 flex">Company name {WorkExperience.workExp1.company_name}<p class="text-gray-600 font-medium"> | Job role | <span class="italics">Link</span> </p>
+           <div class=" font-bold pb-1 flex">{companyName}<p class="text-gray-600 font-medium"> | {role} | <span class="italics">Link</span> </p>
            </div>
-          <div class="text-gray-600"> * </div>
-          <div class="text-gray-600"> * </div>
-          <div class="text-gray-500">{WorkExperience.workExp1.start_date} - {WorkExperience.workExp1.end_date}</div>
+          <div class="text-gray-600"> * {point1}</div>
+          <div class="text-gray-600"> * {point2}</div>
+          <div class="text-gray-500">{startDate} - {endDate}</div>
         </div>
 
         <div class="px-5 py-5">
@@ -27,5 +33,5 @@
       
   </div>
   {#if IsEditing}
-<WorkExperienceForm onSubmit={toogleform} onCancel={toogleform}/>
+<WorkExperienceForm onCancel={toogleform}/>
 {/if}
