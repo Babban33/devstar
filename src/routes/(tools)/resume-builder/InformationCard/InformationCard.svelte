@@ -11,10 +11,15 @@
     import CertificationDetailsMiddleTile from "./certificationDetailsMiddleTile.svelte";
     import CertficationTile from "./CertficationTile.svelte";
     import { achievementStore } from "./AchievementStore";
+    import { EducationStore } from "./EducationStore";
 </script>
 {#if $clickedBtn ==="Education"}
     <EducationFrame/>
-    <CollegeTileText/>
+    {#if $EducationStore.length > 0}
+        {#each $EducationStore as {id, college_name, city, degree, CGPA, start_year, end_year} (id)}
+        <CollegeTileText collegeName={college_name} collegeCity={city} degree={degree} cgpa={CGPA} startYear={start_year} endYear={end_year}/>
+        {/each}
+    {/if}
 {:else if $clickedBtn === "Work Experience"}
     <WorkExperienceMiddleTile/>
     <WorkExperienceTile/>
