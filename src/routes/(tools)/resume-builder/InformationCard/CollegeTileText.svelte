@@ -32,6 +32,6 @@
   </div>
 </div>
 {#if isEditing}
-  <Educationform onSubmit={toggleForm} onCancel={toggleForm}/>
+  <Educationform onCancel={toggleForm}/>
 {/if}
 

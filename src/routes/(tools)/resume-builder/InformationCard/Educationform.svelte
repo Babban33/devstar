@@ -2,15 +2,8 @@
   /**
 	 * @type {() => void}
 	 */
-  export let onSubmit;
-  function formSubmit(){
-    onSubmit();
-  }
-  /**
-	 * @type {() => void}
-	 */
   export let onCancel;
-  function closeForm(){
+  function formSubmit(){
     onCancel();
   }
 </script>
@@ -47,7 +40,7 @@
       </div>
     </div>
     <div class="mt-6 flex justify-end sm:mt-8">
-      <button type="button" id="closebutton" on:click={closeForm} class="mr-4 px-4 py-2 font-thin text-black">Close</button>
+      <button type="button" id="closebutton" on:click={onCancel} class="mr-4 px-4 py-2 font-thin text-black">Close</button>
       <button type="submit" class="rounded-xl border border-gray-800 bg-gray-900 p-1 px-6 py-2 font-thin text-white">Done</button>
     </div>
   </form>
