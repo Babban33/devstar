@@ -1,5 +1,4 @@
 <script>
-  import workExp from "./workExp";
   import WorkExperienceForm from "./WorkExperienceForm.svelte";
   let IsAdd=false;
   function toogleform(){
@@ -31,5 +30,5 @@
   </div>
 </div>
 {#if IsAdd}
-<WorkExperienceForm onSubmit={toogleform} onCancel ={toogleform}/>
+<WorkExperienceForm onCancel ={toogleform}/>
 {/if}
