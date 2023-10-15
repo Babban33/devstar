@@ -10,16 +10,5 @@ interface  workExp {
     start_date: string,
     end_date: string,
   };
-  export const WorkExpStore=writable<workExp>({
-    company_name: "",
-    designation: "",
-    discription_1:"",
-    discription_2:"",
-    start_date: "",
-    end_date: "",
-  })
-
-
-
-export const workExp= writable ( workExp1  );
+  export const WorkExpStore=writable<workExp[]>([]);
 
