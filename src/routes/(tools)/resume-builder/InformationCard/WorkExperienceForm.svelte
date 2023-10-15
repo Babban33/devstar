@@ -2,16 +2,8 @@
   /**
 	 * @type {() => void}
 	 */
-  export let onSubmit;
-  function formSubmit(){
-    onSubmit();
-
-  }
-  /**
-	 * @type {() => void}
-	 */
   export let onCancel;
-  function closeForm(){
+  function formSubmit(){
     onCancel();
   }
 </script>
@@ -58,7 +50,7 @@
  
          <div class="text-right py-8">
            
-           <button on:click={closeForm} type="button" id="closebutton" class="mr-4 px-4 py-2 font-thin text-black">Cancel</button>
+           <button on:click={onCancel} type="button" id="closebutton" class="mr-4 px-4 py-2 font-thin text-black">Cancel</button>
  
            <button type="submit" class="rounded-xl border border-gray-800 bg-gray-900 p-1 px-6 py-2 font-thin text-white">Done</button>
  
