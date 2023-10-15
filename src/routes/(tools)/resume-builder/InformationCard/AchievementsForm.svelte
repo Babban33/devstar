@@ -4,20 +4,13 @@
   /**
 	 * @type {() => void}
 	 */
-  export let onSubmit;
+  export let onCancel;
   function formSubmit(){
-    onSubmit();
+    onCancel();
     achievementStore.update(items => {
       return [...items, {id: $achievementStore.length, achievementName: achievements.achievementName, achievementLink: achievements.achievementLink}];
     });
     console.log($achievementStore.length);
-  }
-  /**
-	 * @type {() => void}
-	 */
-  export let onCancel;
-  function closeForm(){
-    onCancel();
   }
 </script>
 <div class="form-upper">
@@ -37,7 +30,7 @@
         </div>
       </div>
       <div class="mt-6 flex justify-end sm:mt-8">
-        <button on:click={closeForm} type="button" id="closebutton" class="mr-4 px-4 py-2 font-thin text-black">Close</button>
+        <button on:click={onCancel} type="button" id="closebutton" class="mr-4 px-4 py-2 font-thin text-black">Close</button>
         <button type="submit" class="rounded-lg border border-gray-800 bg-gray-900 p-1 px-6 py-2 font-thin text-white">Done</button>
       </div>
     </form>
