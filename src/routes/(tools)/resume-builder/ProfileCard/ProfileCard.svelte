@@ -52,5 +52,5 @@
   </div>
 </div>
 {#if isEditing}
-<ProfileForm/>
+<ProfileForm onCancel={toggleForm}/>
 {/if}
