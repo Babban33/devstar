@@ -5,14 +5,20 @@
   {
     isEditing=!isEditing;
   }
+  export let collegeName: string;
+  export let collegeCity: string;
+  export let degree: string;
+  export let cgpa: string;
+  export let startYear: string;
+  export let endYear: string;
 </script>
 <div class="relative flex rounded-2xl bg-gray-400 font-sans">
   <div class="flex-grow">
     <div class="justify-start px-5 py-5 align-middle">
-      <div class="pb-1 font-bold">College Name, City</div>
+      <div class="pb-1 font-bold">{collegeName}, {collegeCity}</div>
       <div class="pb-1 text-gray-800">
-        Degree | CGPA:
-        <div class="text-gray-500">Start Year - End year</div>
+        {degree} | CGPA: {cgpa}
+        <div class="text-gray-500">{startYear} - {endYear}</div>
       </div>
     </div>
   </div>
