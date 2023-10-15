@@ -3,6 +3,7 @@ import{
 } from "svelte/store";
 
 interface  workExp {
+    id: number,
     company_name: string,
     designation: string,
     discription_1:string,
