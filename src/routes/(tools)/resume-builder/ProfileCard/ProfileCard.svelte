@@ -1,12 +1,16 @@
 <script lang="ts">
-  import EditDownloadButton from "./EditDownloadButton.svelte";
   import { clickedBtn } from "./ClickedButton";
+  import ProfileForm from "./profile_form.svelte";
   let options = ["Education", "Work Experience", "Projects", "Achievements", "Certifications"];
   let toggleOptions = (e: MouseEvent) => {
     let text = (e.target as HTMLButtonElement).textContent;
     if(text){
       $clickedBtn=text;
     }
+  }
+  let isEditing = false;
+  function toggleForm(){
+    isEditing = !isEditing;
   }
 </script>
 <div class="bg-gray-400 p-4 rounded-xl">
@@ -23,7 +27,10 @@
         </div>
       </div>
     </div>
-    <EditDownloadButton/>
+    <div class="gap-4">
+      <button on:click={toggleForm} class="rounded-xl bg-gray-900 px-4 py-2 font-sans font-light text-white" >Edit</button>
+      <button class="rounded-xl bg-gray-900 px-4 py-2 font-sans font-light text-white">Download</button>
+    </div>
   </div>
   <div class="px-2 lg:flex justify-between">
     {#each options as option}
@@ -35,3 +42,6 @@
     {/each}
   </div>
 </div>
+{#if isEditing}
+<ProfileForm/>
+{/if}
