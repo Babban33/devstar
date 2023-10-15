@@ -45,5 +45,5 @@
   {/if}
 </div>
 {#if isEditing}
-<TaglineForm onSubmit={toggleForm} updatedTaglineCard={updateTaglineDetails} onCancel={toggleForm}/>
+<TaglineForm updatedTaglineCard={updateTaglineDetails} onCancel={toggleForm}/>
 {/if}
