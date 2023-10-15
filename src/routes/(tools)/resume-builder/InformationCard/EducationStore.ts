@@ -12,13 +12,5 @@ interface Education {
 
   };
 
-  export const EducationStore = writable<Education>({
-    id: 0,
-    college_name:"hello",
-    city:"pune",
-    degree:"UG",
-    CGPA:"7.7",
-    start_year:"12/23",
-    end_year:"12/26"
-  })
+  export const EducationStore = writable<Education[]>([]);
 
