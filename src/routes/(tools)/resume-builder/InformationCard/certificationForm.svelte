@@ -28,23 +28,7 @@
 >
 	<div class="text-left text-xl font-bold">Certification Details</div>
 	<div class="flex-grow sm:mt-8">
-		
-			<label for="certificatelink" class="mb-1 block font-bold text-gray-900">
-				Links (Optional)</label
-			>
-			<input
-				type="text"
-				id="certificatelink"
-				name="certificatelink"
-				class="w-full rounded-xl border border-gray-600 px-3 py-2"
-				bind:value={certificates.link}
-				placeholder="Enter certificate link"
-			/>
-		
-	</div>
 
-	<div class="flex-1">
-		<div class="ml-4 flex-grow-0 sm:ml-0">
 		<label for="certificateTitle" class="mb-1 block font-bold text-gray-900"
 			>Certificate Title</label
 		>
@@ -57,6 +41,26 @@
 			placeholder="Enter your description"
 			required
 		/>
+		
+			
+		
+	</div>
+
+	<div class="flex-1">
+		<div class="ml-4 flex-grow-0 sm:ml-0">
+
+			<label for="certificatelink" class="mb-1 block font-bold text-gray-900">
+				Links (Optional)  </label
+			>
+			<input
+				type="text"
+				id="certificatelink"
+				name="certificatelink"
+				class="w-full rounded-xl border border-gray-600 px-3 py-2"
+				bind:value={certificates.link}
+				placeholder="Enter certificate link"
+			/>
+		
 	</div>
 	</div>
 
