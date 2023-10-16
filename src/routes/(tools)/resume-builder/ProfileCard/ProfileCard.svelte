@@ -16,6 +16,13 @@
 
   import { profileStore } from "./ProfileStore";
 </script>
+
+<style>
+  .selected {
+    border-bottom: 2px solid gray;
+  }
+</style>
+
 <div class="bg-gray-400 p-4 rounded-xl">
   <div class="flex justify-between mb-4">
     <div class="flex">
@@ -44,7 +51,9 @@
   <div class="px-2 lg:flex justify-between">
     {#each options as option}
       {#if option === $clickedBtn}
+      <div class="selected">
         <button class="font-bold">{option}</button>
+      </div>
       {:else}
         <button on:click={toggleOptions}>{option}</button>
       {/if}
