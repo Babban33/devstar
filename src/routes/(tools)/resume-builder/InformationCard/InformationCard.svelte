@@ -13,6 +13,7 @@
     import { achievementStore } from "./AchievementStore";
     import { EducationStore } from "./EducationStore";
     import {WorkExpStore} from "./workExp";
+    import { projectStore } from "./projectStore";
 </script>
 {#if $clickedBtn ==="Education"}
     <EducationFrame/>
@@ -30,7 +31,11 @@
     {/if}
 {:else if $clickedBtn === "Projects"}
     <ProjectMiddleTile/>
-    <ProjectTextTile/>
+    {#if $projectStore.length > 0}
+        {#each $projectStore as {id, projectName, projectLink, description1} (id)}
+        <ProjectTextTile project={projectName} link={projectLink} description={description1}/>
+        {/each}
+    {/if}
 {:else if $clickedBtn === "Achievements"}
     <AchievementDetailsMiddleTile/>
     {#if $achievementStore.length > 0}
