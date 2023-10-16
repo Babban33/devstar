@@ -57,11 +57,11 @@
       <div class="flex">
         <div class="mr-4 flex-grow sm:mr-8">
           <label for="projectname" class="mb-1 block font-bold text-gray-900">Project Name</label>
-          <input type="text" id="projectname" name="projectname" class="sm:w-2/ w-full rounded-xl border border-gray-600 px-3 py-2" bind:value="{project.name}" placeholder="Enter project name" />
+          <input required type="text" id="projectname" name="projectname" class="sm:w-2/ w-full rounded-xl border border-gray-600 px-3 py-2" bind:value="{project.name}" placeholder="Enter project name" />
         </div>
         <div class="ml-4 flex-grow sm:ml-8">
           <label for="projectlink" class="mb-1 block font-bold text-gray-900">Project Link</label>
-          <input type="text" id="projectlink" name="projectlink" class="w-full rounded-xl border border-gray-600 px-3 py-2" bind:value="{project.link}" placeholder="Enter project link" />
+          <input required type="text" id="projectlink" name="projectlink" class="w-full rounded-xl border border-gray-600 px-3 py-2" bind:value="{project.link}" placeholder="Enter project link" />
         </div>
       </div>
       <div class="mt-4 flex-grow sm:mt-8">
