@@ -29,5 +29,5 @@ export let description: string;
   </div>
 </div>
 {#if isEditing}
-<Projectform onSubmit={toggleForm} onCancel={toggleForm}/>
+<Projectform onCancel={toggleForm}/>
 {/if}

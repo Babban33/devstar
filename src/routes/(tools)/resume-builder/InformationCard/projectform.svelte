@@ -3,17 +3,11 @@
   /**
 	 * @type {() => void}
 	 */
-  export let onSubmit;
-  function formSubmit(){
-       onSubmit();
-  }
-  /**
-	 * @type {() => void}
-	 */
   export let onCancel;
-  function closeForm(){
+  function formSubmit(){
     onCancel();
   }
+  
 </script>
 
 <style>
@@ -40,7 +34,7 @@
 
 <div class="form-upper">
   <div class="form-container">
-    <form on:submit={formSubmit} id="projectform">
+    <form on:submit|preventDefault={formSubmit} id="projectform">
       <div class="mb-4 text-left text-xl font-bold">Projects Details</div>
       <div class="flex">
         <div class="mr-4 flex-grow sm:mr-8">
@@ -57,7 +51,7 @@
         <textarea id="projectdesc" name="projectdesc" class="w-full rounded-xl border border-gray-600 px-3 py-2" rows="2" bind:value="{projects.project1.description1}" placeholder="Enter your description"></textarea>
       </div>
       <div class="mt-6 flex justify-end sm:mt-8">
-        <button on:click={closeForm} type="button" id="closebutton" class="mr-4 px-4 py-2 font-thin text-black">Close</button>
+        <button on:click={onCancel} type="button" id="closebutton" class="mr-4 px-4 py-2 font-thin text-black">Close</button>
         <button type="submit" class="rounded-xl border border-gray-800 bg-gray-900 p-1 px-6 py-2 font-thin text-white">Done</button>
       </div>
     </form>
