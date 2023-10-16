@@ -9,8 +9,4 @@ import{
     title: string,
   };
 
-  export const Certificationstore = writable<Certificate>( {
-    id: 0,
-    link:"url",
-    title:"certificate"
-  })
+  export const Certificationstore = writable<Certificate[]>([])
