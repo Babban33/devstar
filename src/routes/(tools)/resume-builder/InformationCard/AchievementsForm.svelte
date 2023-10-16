@@ -3,7 +3,7 @@
   let achievements={achievementName :" ", achievementLink: " "}
   /**
 	 * @type {() => void}
-	 */
+	 */ 
   export let onCancel;
   function formSubmit(){
     onCancel();
