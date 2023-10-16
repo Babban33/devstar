@@ -4,8 +4,7 @@
   /**
 	 * @type {() => void}
 	 */
-  export let onSubmit;
-
+   export let onCancel;
   /**
 	 * @type {(arg0: { tagline: string; techSkills: string[]; softSkills: string[]; }) => void}
 	 */
@@ -14,7 +13,7 @@
   let techSkillsInput = '';
   let softSkillsInput = '';
   function formSubmit() {
-    onSubmit();
+    onCancel();
     const techSkills = techSkillsInput.split(/\n|,/).map(skill => skill.trim()).filter(skill => skill !== '');
     const softSkills = softSkillsInput.split(/\n|,/).map(skill => skill.trim()).filter(skill => skill !== '');
     updatedTaglineCard({
@@ -23,15 +22,12 @@
       softSkills,
     });
   }
-  /**
-	 * @type {() => void}
-	 */
-   export let onCancel;
+
 </script>
 <div class="form-upper">
   <div class="form-container">
     <!-- <form on:submit={formSubmit} id="taglineform" class="dark:bg-gray-400 flex flex-col rounded-xl border-2 border-gray p-6 sm:w-2/3"> -->
-    <form on:submit={formSubmit} id="taglineform" class="">  
+    <form on:submit|preventDefault={formSubmit} id="taglineform" class="">  
       <div class="mb-4 text-left text-xl font-bold">Edit Profile</div>
       <div class="mb-3">
         <label for="addyourtagline" class="mb-1 block font-serif font-medium text-gray-900">Add your Tagline</label>

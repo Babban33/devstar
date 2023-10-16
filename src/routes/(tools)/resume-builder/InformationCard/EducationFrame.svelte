@@ -35,5 +35,5 @@
 </script>
 
 {#if isEditing}
-<Educationform onSubmit={educationForm}  onCancel={educationForm}/>
+<Educationform  onCancel={educationForm}/>
 {/if}

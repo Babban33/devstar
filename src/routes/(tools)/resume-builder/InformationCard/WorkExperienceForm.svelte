@@ -1,18 +1,22 @@
 <script>
-  /**
-	 * @type {() => void}
-	 */
-  export let onSubmit;
-  function formSubmit(){
-    onSubmit();
-
-  }
+  import { WorkExpStore } from "./workExp";
+  let experience = {
+    company: "",
+    job: "",
+    link: "",
+    Description: "",
+    start: "",
+    end: "",
+  };
   /**
 	 * @type {() => void}
 	 */
   export let onCancel;
-  function closeForm(){
+  function formSubmit(){
     onCancel();
+    WorkExpStore.update(items =>{
+      return [...items, {id: $WorkExpStore.length, company_name: experience.company, designation: experience.job, discription_1: experience.link, discription_2: experience.Description, start_date: experience.start, end_date: experience.end}]
+    })
   }
 </script>
  
@@ -22,22 +26,22 @@
     
          <div  class="py-3">
              <label for="company" class="block mb-2 text-sm font-medium">Company name</label>
-             <input type="text" id="company" class="bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-lg  block w-full p-2.5  " placeholder="Ex: microsoft ,google ,facebook etc" required>
+             <input bind:value={experience.company} type="text" id="company" class="bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-lg  block w-full p-2.5  " placeholder="Ex: microsoft ,google ,facebook etc" required>
          </div>
  
          <div class="py-2">
              <label for="job" class="block mb-2 text-sm font-medium " >Job role</label>
-             <input type="text" id="job" class="bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-lg  block w-full p-2.5 " placeholder="eg: Manager,project leader etc." required>
+             <input bind:value={experience.job} type="text" id="job" class="bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-lg  block w-full p-2.5 " placeholder="eg: Manager,project leader etc." required>
          </div>
     
          <div class="py-2">
              <label for="link" class="block mb-2 text-sm font-medium ">Website/link</label>
-             <input type="url" id="link" class="bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-lg  block w-full p-2.5 " placeholder="github.com" required>
+             <input bind:value={experience.link} type="url" id="link" class="bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-lg  block w-full p-2.5 " placeholder="github.com" required>
          </div>
          
          <div class="py-2">
              <label for="Description" class="block mb-2 text-sm font-medium ">Description</label>
-             <textarea id="Description" class="bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-lg  block w-full p-2.5 " placeholder="About your company" required></textarea>
+             <textarea bind:value={experience.Description} id="Description" class="bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-lg  block w-full p-2.5 " placeholder="About your company" required></textarea>
          </div>
          
          <div class="p-2">
@@ -46,11 +50,11 @@
           <div class="flex items-center">
           <div class="relative">
            
-           <input  name="start" type="date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full px-8 p-2.5  " placeholder="Select start date">
+           <input bind:value={experience.start} name="start" type="date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full px-8 p-2.5  " placeholder="Select start date">
             </div>
                <span class="mx-4 text-gray-500">to</span>
                <div class="relative">
-                 <input name="end" type="date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full px-8 p-2.5 " placeholder="Select end date">
+                 <input bind:value={experience.end} name="end" type="date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full px-8 p-2.5 " placeholder="Select end date">
                </div>
             </div>
  
@@ -58,13 +62,11 @@
  
          <div class="text-right py-8">
            
-           <button on:click={closeForm} type="button" id="closebutton" class="mr-4 px-4 py-2 font-thin text-black">Cancel</button>
+           <button on:click={onCancel} type="button" id="closebutton" class="mr-4 px-4 py-2 font-thin text-black">Cancel</button>
  
            <button type="submit" class="rounded-xl border border-gray-800 bg-gray-900 p-1 px-6 py-2 font-thin text-white">Done</button>
  
          </div>
- 
- 
          </div>
     </form>
  

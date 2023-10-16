@@ -25,5 +25,5 @@
   </div>
 </div>
 {#if isEditing}
-  <AchievementsForm onSubmit={toggleForm} onCancel={toggleForm}/>
+  <AchievementsForm onCancel={toggleForm}/>
 {/if}

@@ -1,19 +1,21 @@
-<script>
-  import {projectStore} from "./projectStore";
+<script lang="ts">
   import Projectform from "./projectform.svelte";
   let isEditing=false
   function toggleForm()
 {
   isEditing=!isEditing
 }
+export let project: string;
+export let link: string;
+export let description: string;
 </script>
 <div class="relative flex rounded-2xl bg-gray-400 font-sans">
   <div class="flex-grow">
     <div class="justify-start px-5 py-5 align-middle">
       <div class="pb-1 font-bold">{$projectStore.name}</div>
       <div class="pb-1 text-gray-900">
-        | <a href="#" class="text-gray-600">{$projectStore.link}</a>
-        <div class="text-gray-500">{$projectStore.description1}</div>
+        {project} | <a href="{link}" class="text-gray-600">Link</a>
+        <div class="text-gray-500">{description}</div>
       </div>
     </div>
   </div>
@@ -27,5 +29,5 @@
   </div>
 </div>
 {#if isEditing}
-<Projectform onSubmit={toggleForm} onCancel={toggleForm}/>
+<Projectform onCancel={toggleForm}/>
 {/if}
