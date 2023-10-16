@@ -1,7 +1,7 @@
 <script>
 // @ts-nocheck
 
-	import certificates from './certificate';
+	import { Certificationstore } from "./Certificationstore";
 	/**
 	 * @type {() => void}
 	 */
@@ -28,7 +28,7 @@
 				id="certificatelink"
 				name="certificatelink"
 				class="w-full rounded-xl border border-gray-600 px-3 py-2"
-				bind:value={certificates.link}
+				bind:value={Certificate.link}
 				placeholder="Enter certificate link"
 			/>
 		</div>
@@ -42,7 +42,7 @@
 			name="certificateTitle"
 			class="w-full rounded-xl border border-gray-600 px-3 py-2"
 			rows="2"
-			bind:value={certificates.title}
+			bind:value={Certificate.title}
 			placeholder="Enter your description"
 		/>
 	</div>
