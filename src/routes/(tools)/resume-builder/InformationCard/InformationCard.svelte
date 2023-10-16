@@ -14,6 +14,7 @@
     import { EducationStore } from "./EducationStore";
     import {WorkExpStore} from "./workExp";
     import { projectStore } from "./projectStore";
+    import { Certificationstore } from "./Certificationstore";
 </script>
 {#if $clickedBtn ==="Education"}
     <EducationFrame/>
@@ -45,5 +46,9 @@
     {/if}
 {:else if $clickedBtn === "Certifications"}
     <CertificationDetailsMiddleTile/>
-    <CertficationTile/>
+    {#if $Certificationstore.length > 0}
+        {#each $Certificationstore as {id, title, link} (id)}
+        <CertficationTile certificateTitle={title} certificateLink={link}/>
+        {/each}
+    {/if}
 {/if}
