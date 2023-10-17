@@ -1,13 +1,25 @@
 <script>
-// @ts-nocheck
-
-	import certificates from './certificate';
+	import {Certificationstore} from './Certificationstore';
 	/**
 	 * @type {() => void}
 	 */
-	export let onSubmit;
+	export let onCancel;
+	let certificate = {
+		certificateLink: "",
+		cettificateTitle: "",
+	}
 	function formSubmit() {
-		onSubmit();
+		onCancel();
+		Certificationstore.update(items =>{
+			return [
+				...items,
+				{
+					id: $Certificationstore.length,
+					link: certificate.certificateLink,
+					title: certificate.cettificateTitle,
+				}
+			]
+		})
 	}
 </script>
 
@@ -28,7 +40,7 @@
 				id="certificatelink"
 				name="certificatelink"
 				class="w-full rounded-xl border border-gray-600 px-3 py-2"
-				bind:value={certificates.link}
+				bind:value={certificate.certificateLink}
 				placeholder="Enter certificate link"
 			/>
 		</div>
@@ -42,13 +54,13 @@
 			name="certificateTitle"
 			class="w-full rounded-xl border border-gray-600 px-3 py-2"
 			rows="2"
-			bind:value={certificates.title}
+			bind:value={certificate.cettificateTitle}
 			placeholder="Enter your description"
 		/>
 	</div>
 	
 	<div class="mt-6 flex justify-end sm:mt-8">
-		<button type="button" id="closebutton" class="mr-4 px-4 py-2 font-thin text-black">Close</button
+		<button on:click={onCancel} type="button" id="closebutton" class="mr-4 px-4 py-2 font-thin text-black">Close</button
 		>
 		<button
 			type="submit"
