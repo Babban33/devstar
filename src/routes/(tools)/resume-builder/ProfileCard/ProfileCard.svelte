@@ -1,6 +1,6 @@
 <script lang="ts">
   import { clickedBtn } from "./ClickedButton";
-  let options = ["Education", "Work Experience", "Projects", "Achievements", "Certifications"];
+  let options = ["Education", "Work Experience", "Projects", "Achievements", "Skills", "Certifications"];
   let toggleOptions = (e: MouseEvent) => {
     let text = (e.target as HTMLButtonElement).textContent;
     if(text){
