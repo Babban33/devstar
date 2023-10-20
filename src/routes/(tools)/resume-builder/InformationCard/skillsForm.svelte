@@ -1,6 +1,15 @@
+<script>
+  /**
+	 * @type {() => void}
+	 */
+   export let onCancel;
+  function formSubmit(){
+    onCancel();
+  }
+</script>
 <div class="form-upper">
     <div class="form-container">
-      <form id="projectform">
+      <form on:submit|preventDefault={formSubmit} id="projectform">
         <div class="text-left text-xl font-bold">Skills Details</div>
   
         <div class="flex flex-wrap mt-8">
@@ -15,7 +24,7 @@
         </div>
   
         <div class="mt-6 flex justify-end sm:mt-8">
-          <button type="button" id="closebutton" class="mr-4 px-4 py-2 font-thin text-black">Close</button>
+          <button on:click={onCancel} type="button" id="closebutton" class="mr-4 px-4 py-2 font-thin text-black">Close</button>
           <button type="submit" class="rounded-lg border border-gray-800 bg-gray-900 p-1 px-6 py-2 font-thin text-white">Done</button>
         </div>
       </form>
