@@ -66,11 +66,11 @@
         <label for="dates" class="block mb-2 text-sm font-medium">Start - End Date</label>
         <div class="flex items-center">
           <div class="relative">
-            <input bind:value={experience.start} name="start" type="date" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Select start date">
+            <input required bind:value={experience.start} name="start" type="date" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Select start date">
           </div>
           <span class="mx-4 text-gray-500">to</span>
           <div class="relative">
-            <input bind:value={experience.end} name="end" type="date" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Select end date">
+            <input required bind:value={experience.end} name="end" type="date" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Select end date">
           </div>
         </div>
       </div>

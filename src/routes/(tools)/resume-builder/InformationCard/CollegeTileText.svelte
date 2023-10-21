@@ -13,7 +13,9 @@ import {EducationStore} from "./EducationStore";
   export let startYear: string;
   export let endYear: string;
 </script>
-<div class="relative flex rounded-2xl bg-gray-400 font-sans">
+
+
+<div class="relative flex rounded-2xl bg-gray-400 font-sans mt-4  ">
   <div class="flex-grow">
     <div class="justify-start px-5 py-5 align-middle">
       <div class="pb-1 font-bold">{collegeName}, {collegeCity}</div>
@@ -32,6 +34,7 @@ import {EducationStore} from "./EducationStore";
     </button>
   </div>
 </div>
+
 {#if isEditing}
   <Educationform onCancel={toggleForm}/>
 {/if}
