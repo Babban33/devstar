@@ -16,6 +16,7 @@
     import { EducationStore } from "./EducationStore";
     import {WorkExpStore} from "./workExp";
     import { projectStore } from "./projectStore";
+    import { SkillsStore } from "./SkillsStore";
     import { Certificationstore } from "./Certificationstore";
 </script>
 {#if $clickedBtn ==="Education"}
@@ -48,7 +49,9 @@
     {/if}
 {:else if $clickedBtn === "Skills"}
     <SkillsMiddleTile/>
-    <SkillsTextTile/>
+    {#if $SkillsStore.techSkills.length >0 || $SkillsStore.softSkills.length >0}
+        <SkillsTextTile/>
+    {/if}
 {:else if $clickedBtn === "Certifications"}
     <CertificationDetailsMiddleTile/>
     {#if $Certificationstore.length > 0}
