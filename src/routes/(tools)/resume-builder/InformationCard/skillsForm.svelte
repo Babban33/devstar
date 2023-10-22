@@ -1,10 +1,25 @@
 <script>
+  import {SkillsStore} from './SkillsStore';
+
   /**
 	 * @type {() => void}
 	 */
    export let onCancel;
+   /**
+	 * @type {(arg0: { techSkills: string[]; softSkills: string[]; }) => void}
+	 */
+  export let updatedSkills;
+  
+  let techSkillsInput = '';
+  let softSkillsInput = '';
   function formSubmit(){
     onCancel();
+    const techSkills = techSkillsInput.split(/\n|,/).map(skill => skill.trim()).filter(skill => skill !== '');
+    const softSkills = softSkillsInput.split(/\n|,/).map(skill => skill.trim()).filter(skill => skill !== '');
+    updatedSkills({
+      techSkills,
+      softSkills,
+    });
   }
 </script>
 <div class="form-upper">
