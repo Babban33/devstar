@@ -9,6 +9,7 @@
     import AchievementDetailsMiddleTile from "./achievementDetailsMiddleTile.svelte";
     import AchievementTile from "./AchievementTile.svelte";
     import SkillsMiddleTile from "./skillsMiddleTile.svelte";
+    import SkillsTextTile from "./SkillsTextTile.svelte";
     import CertificationDetailsMiddleTile from "./certificationDetailsMiddleTile.svelte";
     import CertficationTile from "./CertficationTile.svelte";
     import { achievementStore } from "./AchievementStore";
@@ -47,6 +48,7 @@
     {/if}
 {:else if $clickedBtn === "Skills"}
     <SkillsMiddleTile/>
+    <SkillsTextTile/>
 {:else if $clickedBtn === "Certifications"}
     <CertificationDetailsMiddleTile/>
     {#if $Certificationstore.length > 0}
