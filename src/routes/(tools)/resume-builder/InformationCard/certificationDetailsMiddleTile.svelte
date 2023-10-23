@@ -33,5 +33,5 @@
     </div>
   </div>
 {#if isEditing}
-  <CForm onCancel={toggleForm}/>
+  <CForm onCancel={toggleForm} idtoadd={-1}/>
 {/if}
