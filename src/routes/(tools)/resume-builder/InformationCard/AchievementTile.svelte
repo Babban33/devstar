@@ -10,9 +10,9 @@
 </script>
 <div class="flex items-center justify-between rounded-2xl bg-gray-400 p-6 mb-4">
   <div>
-    <h1 class="inline text-lg font-semibold">{achieve}</h1>
+    <h1 class="inline text-lg font-semibold">{achieve} | </h1>
     {#if link !== ""}
-      <a class=" text-sm text-gray-500 " href="{link}" target="_blank">Link</a>
+      <a class=" text-sm text-gray-600 " href="{link}" target="_blank">Link</a>
     {/if}
   </div>
   <div class="flex items-center">
