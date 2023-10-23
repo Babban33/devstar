@@ -1,3 +1,4 @@
+
 <script lang="ts">
   import CForm from "./CForm.svelte";
   export let certificateTitle: string;
@@ -9,7 +10,7 @@
   }
 </script>
 
-<div class="flex items-center justify-between rounded-2xl bg-gray-400 p-4">
+<div class="flex items-center justify-between rounded-2xl bg-gray-300 p-6 mb-2">
   <div>
     <h1 class="inline text-lg font-semibold">{certificateTitle}<span class="text-base font-normal text-gray-500"> | <a href="{certificateLink}">Link</a></span></h1>
   </div>
