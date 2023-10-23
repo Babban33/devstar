@@ -3,8 +3,8 @@
   let experience = {
     company: "",
     job: "",
-    link: "",
-    Description: "",
+    point1: "",
+    point2: "",
     start: "",
     end: "",
   };
@@ -15,7 +15,7 @@
   function formSubmit(){
     onCancel();
     WorkExpStore.update(items =>{
-      return [...items, {id: $WorkExpStore.length, company_name: experience.company, designation: experience.job, discription_1: experience.link, discription_2: experience.Description, start_date: experience.start, end_date: experience.end}]
+      return [...items, {id: $WorkExpStore.length, company_name: experience.company, designation: experience.job, discription_1: experience.point1, discription_2: experience.point2, start_date: experience.start, end_date: experience.end}]
     })
   }
 </script>
@@ -55,15 +55,15 @@
         <input bind:value={experience.job} type="text" id="job" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="e.g., Manager, Project Leader, etc." required>
       </div>
       <div class="py-2">
-        <label for="link" class="block mb-1 text-gray-900 font-bold">Website/link</label>
-        <input bind:value={experience.link} type="text" id="link" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="e.g., github.com" required>
+        <label for="link" class="block mb-1 text-gray-900 font-bold">Point 1</label>
+        <input bind:value={experience.point1} type="text" id="link" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Enter first bullet point" required>
       </div>
       <div class="py-2">
-        <label for="Description" class="block mb-1 text-gray-900 font-bold">Description</label>
-        <textarea bind:value={experience.Description} id="Description" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="About your company" required></textarea>
+        <label for="link" class="block mb-1 text-gray-900 font-bold">Point 2</label>
+        <input bind:value={experience.point2} type="text" id="link" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Enter second bullet point" required>
       </div>
       <div class="p-2">
-        <label for="dates" class="block mb-2 text-sm font-medium">Start - End Date</label>
+        <label for="dates" class="block mb-2 text-sm font-bold">Start - End Date</label>
         <div class="flex items-center">
           <div class="relative">
             <input required bind:value={experience.start} name="start" type="date" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Select start date">

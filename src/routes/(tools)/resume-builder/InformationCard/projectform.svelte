@@ -46,7 +46,6 @@
     max-width: 600px;
     padding: 20px;
     border-radius: 10px;
-    /* box-shadow: 0 25px 50px -12px rgba(99, 99, 99, 0.25); */
   }
 </style>
 
@@ -64,9 +63,13 @@
           <input required type="text" id="projectlink" name="projectlink" class="w-full rounded-xl border border-gray-600 px-3 py-2" bind:value="{project.link}" placeholder="Enter project link" />
         </div>
       </div>
-      <div class="mt-4 flex-grow sm:mt-8">
-        <label for="projectdesc" class="mb-1 block font-bold text-gray-900">Project Description</label>
-        <textarea id="projectdesc" name="projectdesc" class="w-full rounded-xl border border-gray-600 px-3 py-2" rows="2" bind:value="{project.description1}" placeholder="Enter your description"></textarea>
+      <div class="flex-grow sm:mt-2">
+        <label for="projectdesc" class="mb-1 block font-bold text-gray-900">Point 1</label>
+        <input bind:value={project.description1} type="text" id="link" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Enter first bullet point" required>
+      </div>
+      <div class="flex-grow sm:mt-2">
+        <label for="projectdesc" class="mb-1 block font-bold text-gray-900">Point 2</label>
+        <input bind:value={project.description2} type="text" id="link" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Enter second bullet point" required>
       </div>
       <div class="mt-6 flex justify-end sm:mt-8">
         <button on:click={onCancel} type="button" id="closebutton" class="mr-4 px-4 py-2 font-thin text-black">Close</button>

@@ -14,7 +14,7 @@
 </script>
 
 
-<div class="relative flex rounded-2xl bg-gray-400 font-sans mt-4  ">
+<div class="relative flex rounded-2xl bg-gray-400 font-sans mb-4">
   <div class="flex-grow">
     <div class="justify-start px-5 py-5 align-middle">
       <div class="pb-1 font-bold">{collegeName}, {collegeCity}</div>

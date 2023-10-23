@@ -33,7 +33,7 @@
     </div>
   </div>
   {#if isEditing}
-<AchievementsForm onCancel={toggleForm}/>
+<AchievementsForm onCancel={toggleForm} idtoadd={-1}/>
 {/if}
 
  
