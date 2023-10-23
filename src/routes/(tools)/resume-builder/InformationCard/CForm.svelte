@@ -1,15 +1,16 @@
-<script>
+<script lang="ts">
 	import {Certificationstore} from './Certificationstore';
-	/**
-	 * @type {() => void}
-	 */
-	export let onCancel;
+
+	 export let onCancel: () => void;
+	export let idtoadd: number;
+	
 	let certificate = {
 		certificateLink: "",
 		cettificateTitle: "",
 	}
 	function formSubmit() {
 		onCancel();
+		if(idtoadd === -1){
 		Certificationstore.update(items =>{
 			return [
 				...items,
@@ -19,7 +20,14 @@
 					title: certificate.cettificateTitle,
 				}
 			]
-		})
+		});
+	}
+	else if(idtoadd > -1) {
+        $Certificationstore[idtoadd].certificateLink=certificate.certificateLink;
+		$Certificationstore[idtoadd].cettificateTitle=certificate.cettificateTitle
+
+	}
+	console.log($Certificationstore.length);
 	}
 </script>
 
@@ -45,6 +53,17 @@
 		<label for="certificateTitle" class="mb-1 block font-bold text-gray-900"
 			>Certificate Title</label
 		>
+		{#if idtoadd >-1}
+		<textarea
+			id="certificateTitle"
+			name="certificateTitle"
+			class="w-full rounded-xl border border-gray-600 px-3 py-2"
+			rows="2"
+			bind:value= "{$Certificationstore[idtoadd].cettificateTitle}"
+			placeholder="Enter your description"
+		/>
+
+		{:else}
 		<textarea
 			id="certificateTitle"
 			name="certificateTitle"
@@ -53,10 +72,22 @@
 			bind:value={certificate.cettificateTitle}
 			placeholder="Enter your description"
 		/>
+		{/if}
 
 		<label for="certificatelink" class="mb-1 block font-bold text-gray-900">
 			Links (Optional)</label
 		>
+		{#if idtoadd >-1}
+		<input
+		type="text"
+		id="certificatelink"
+		name="certificatelink"
+		class="w-full rounded-xl border border-gray-600 px-3 py-2"
+		bind:value={$Certificationstore[idtoadd].certificateLink}
+		placeholder="Enter certificate link"
+	/>
+
+		{:else}
 		<input
 			type="text"
 			id="certificatelink"
@@ -65,6 +96,7 @@
 			bind:value={certificate.certificateLink}
 			placeholder="Enter certificate link"
 		/>
+		{/if}
 	</div>
 	</div>
 	
