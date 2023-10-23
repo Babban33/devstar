@@ -1,9 +1,12 @@
 
 <script lang="ts">
+
   import CForm from "./CForm.svelte";
   export let certificateTitle: string;
   export let certificateLink: string;
+  export let idfordetail: number;
   let isEditing = false;
+
   function toggleForm()
   {
     isEditing = !isEditing;
@@ -24,5 +27,5 @@
   </div>
 </div>
 {#if isEditing}
-  <CForm onCancel={toggleForm}/>
+  <CForm onCancel={toggleForm} idtoadd ={idfordetail}/>
 {/if}
