@@ -1,6 +1,5 @@
 <script lang="ts">
   import AchievementsForm from './AchievementsForm.svelte';
-  import { achievementStore } from './AchievementStore';
   let isEditing=false;
   function toggleForm()
   {
