@@ -8,7 +8,7 @@
   export let achieve: string;
   export let link : string;
 </script>
-<div class="flex items-center justify-between rounded-2xl bg-gray-300 p-6 mb-2">
+<div class="flex items-center justify-between rounded-2xl bg-gray-400 p-6 mb-4">
   <div>
     <h1 class="inline text-lg font-semibold">{achieve}</h1>
     {#if link !== ""}
