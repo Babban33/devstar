@@ -36,8 +36,8 @@
 {:else if $clickedBtn === "Projects"}
     <ProjectMiddleTile/>
     {#if $projectStore.length > 0}
-        {#each $projectStore as {id, projectName, projectLink, description1} (id)}
-        <ProjectTextTile project={projectName} link={projectLink} description={description1}/>
+        {#each $projectStore as {id, projectName, projectLink, description1, description2} (id)}
+        <ProjectTextTile project={projectName} link={projectLink} point1={description1} point2={description2}/>
         {/each}
     {/if}
 {:else if $clickedBtn === "Achievements"}

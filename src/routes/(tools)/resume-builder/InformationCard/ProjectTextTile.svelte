@@ -7,14 +7,18 @@
 }
 export let project: string;
 export let link: string;
-export let description: string;
+export let point1: string;
+export let point2: string;
 </script>
 <div class="relative flex rounded-2xl bg-gray-400 font-sans mb-4">
   <div class="flex-grow">
     <div class="justify-start px-5 py-5 align-middle">
       <div class="pb-1 font-bold">{project} | <a href="{link}" class="text-gray-600 font-normal">Link</a></div>
       <div class="pb-1 text-gray-900">
-        <div class="text-gray-500">{description}</div>
+        <ul class="text-gray-800 list-disc pl-5">
+          <li>{point1}</li>
+          <li>{point2}</li>
+        </ul>
       </div>
     </div>
   </div>
