@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import {projectStore} from "./projectStore";
   let project = {
     name: "",
@@ -7,10 +7,7 @@
     description2: "",
     link: "",
   }
-  /**
-	 * @type {() => void}
-	 */
-  export let onCancel;
+  export let onCancel: ()=> void;
   function formSubmit(){
     onCancel();
     projectStore.update(items => [

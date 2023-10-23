@@ -1,10 +1,7 @@
-<script>
+<script lang="ts">
   import { EducationStore } from "./EducationStore";
   let education={collegeName :" ", city: " ", degree: " ", cgpa: " ", startYear: " ", endYear: " "}
-  /**
-	 * @type {() => void}
-	 */
-  export let onCancel;
+  export let onCancel: () => void;
   function formSubmit(){
     onCancel();
     EducationStore.update(items => {

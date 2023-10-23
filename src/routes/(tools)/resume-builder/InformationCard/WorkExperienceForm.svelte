@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { WorkExpStore } from "./workExp";
   let experience = {
     company: "",
@@ -8,10 +8,7 @@
     start: "",
     end: "",
   };
-  /**
-	 * @type {() => void}
-	 */
-  export let onCancel;
+  export let onCancel: ()=> void;
   function formSubmit(){
     onCancel();
     WorkExpStore.update(items =>{

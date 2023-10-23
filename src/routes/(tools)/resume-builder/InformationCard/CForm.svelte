@@ -1,9 +1,6 @@
-<script>
+<script lang="ts">
 	import {Certificationstore} from './Certificationstore';
-	/**
-	 * @type {() => void}
-	 */
-	export let onCancel;
+	export let onCancel: () => void;
 	let certificate = {
 		certificateLink: "",
 		cettificateTitle: "",
