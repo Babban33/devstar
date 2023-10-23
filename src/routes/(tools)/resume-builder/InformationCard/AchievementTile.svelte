@@ -25,5 +25,5 @@
   </div>
 </div>
 {#if isEditing}
-  <AchievementsForm onCancel={toggleForm}/>
+  <AchievementsForm onCancel={toggleForm} idtoadd={0}/>
 {/if}

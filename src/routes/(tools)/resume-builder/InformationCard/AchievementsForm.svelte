@@ -1,15 +1,15 @@
-<script>
+<script lang="ts">
   import { achievementStore } from "./AchievementStore";
   let achievements={achievementName :" ", achievementLink: " "}
-  /**
-	 * @type {() => void}
-	 */
-  export let onCancel;
+  export let onCancel: () => void;
+  export let idtoadd: number;
   function formSubmit(){
     onCancel();
-    achievementStore.update(items => {
-      return [...items, {id: $achievementStore.length, achievementName: achievements.achievementName, achievementLink: achievements.achievementLink}];
-    });
+    if(idtoadd === -1){
+      achievementStore.update(items => {
+        return [...items, {id: $achievementStore.length, achievementName: achievements.achievementName, achievementLink: achievements.achievementLink}];
+      });
+    }
     console.log($achievementStore.length);
   }
 </script>
