@@ -30,11 +30,11 @@
         <div class="flex flex-wrap mt-8">
           <div class="w-1/2 pr-4">
             <label for="projectdesc" class="mb-1 block font-bold text-gray-900">Add your Technical Skills</label>
-            <input id="projectdesc" name="projectdesc" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Type Skills"/>
+            <input id="projectdesc" name="projectdesc" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Type Skills" bind:value="{techSkillsInput}" />
           </div>
           <div class="w-1/2">
             <label for="projectlink" class="mb-1 block font-bold text-gray-900">Add your Soft Skills</label>
-            <input type="text" id="projectlink" name="projectlink" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Type Skills" />
+            <input type="text" id="projectlink" name="projectlink" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Type Skills" bind:value="{softSkillsInput}" />
           </div>
         </div>
   
