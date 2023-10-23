@@ -44,7 +44,7 @@
     <AchievementDetailsMiddleTile/>
     {#if $achievementStore.length > 0}
         {#each $achievementStore as {id, achievementName, achievementLink} (id)}
-        <AchievementTile achieve={achievementName} link={achievementLink}/>
+        <AchievementTile achieve={achievementName} link={achievementLink} idfordetail={id}/>
         {/each}
     {/if}
 {:else if $clickedBtn === "Skills"}

@@ -1,5 +1,6 @@
 <script lang="ts">
   import AchievementsForm from './AchievementsForm.svelte';
+  import { achievementStore } from './AchievementStore';
   let isEditing=false;
   function toggleForm()
   {
@@ -7,6 +8,7 @@
   }
   export let achieve: string;
   export let link : string;
+  export let idfordetail: number;
 </script>
 <div class="flex items-center justify-between rounded-2xl bg-gray-400 p-6 mb-4">
   <div>
@@ -25,5 +27,5 @@
   </div>
 </div>
 {#if isEditing}
-  <AchievementsForm onCancel={toggleForm} idtoadd={0}/>
+  <AchievementsForm onCancel={toggleForm} idtoadd={idfordetail}/>
 {/if}
