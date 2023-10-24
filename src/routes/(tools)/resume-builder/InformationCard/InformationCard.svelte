@@ -22,8 +22,8 @@
 {#if $clickedBtn ==="Education"}
     <EducationFrame/>
     {#if $EducationStore.length > 0}
-        {#each $EducationStore as {id, college_name, city, degree, CGPA, start_year, end_year} (id)}
-        <EducationTextTile collegeName={college_name} collegeCity={city} degree={degree} cgpa={CGPA} startYear={start_year} endYear={end_year}/>
+        {#each $EducationStore as {id} (id)}
+        <EducationTextTile idfordetail={id}/>
         {/each}
     {/if}
 {:else if $clickedBtn === "Work Experience"}
