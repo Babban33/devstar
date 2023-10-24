@@ -5,22 +5,17 @@
  function toogleform(){
   IsEditing=!IsEditing;
  }
- export let companyName:string;
- export let role:string;
- export let point1:string;
-  export let point2:string;
-  export let startDate:string;
-  export let endDate:string;
+ export let idfordetail: number;
 </script>
   <div class="bg-gray-400 rounded-2xl font-sans flex justify-between mb-4">
     <div class="px-5 py-5 align-middle">
-      <div class=" font-bold pb-1 flex">{companyName}<p class="text-gray-600 font-medium">  | {role}</p>
+      <div class=" font-bold pb-1 flex">{$WorkExpStore[idfordetail].company_name}<p class="text-gray-600 font-medium">  | {$WorkExpStore[idfordetail].designation}</p>
       </div>
       <ul class="text-gray-800 list-disc pl-5">
-        <li>{point1}</li>
-        <li>{point2}</li>
+        <li>{$WorkExpStore[idfordetail].discription_1}</li>
+        <li>{$WorkExpStore[idfordetail].discription_2}</li>
       </ul>      
-      <div class="text-gray-500 text-sm">{startDate} - {endDate}</div>
+      <div class="text-gray-500 text-sm">{$WorkExpStore[idfordetail].start_date} - {$WorkExpStore[idfordetail].end_date}</div>
     </div>
     
     <div class="px-5 py-5">
@@ -33,5 +28,5 @@
     </div>    
   </div>
   {#if IsEditing}
-    <WorkExperienceForm onCancel={toogleform} idtoadd={0}/>
+    <WorkExperienceForm onCancel={toogleform} idtoadd={idfordetail}/>
   {/if}

@@ -29,8 +29,8 @@
 {:else if $clickedBtn === "Work Experience"}
     <WorkExperienceMiddleTile/>
     {#if $WorkExpStore.length > 0}
-        {#each $WorkExpStore as {id, company_name, designation, discription_1, discription_2, start_date, end_date} (id)}
-        <WorkExperienceTile companyName={company_name} role={designation} point1={discription_1} point2={discription_2} startDate={start_date} endDate={end_date}/>
+        {#each $WorkExpStore as {id} (id)}
+        <WorkExperienceTile idfordetail={id}/>
         {/each}
     {/if}
 {:else if $clickedBtn === "Projects"}
