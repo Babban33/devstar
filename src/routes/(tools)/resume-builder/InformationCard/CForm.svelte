@@ -22,11 +22,11 @@
             ]
         });
     }
-    else if(idtoadd > -1) {
-        $Certificationstore[idtoadd].link=certificate.certificateLink;
-        $Certificationstore[idtoadd].title=certificate.cettificateTitle
+    // else if(idtoadd > -1) {
+    //     $Certificationstore[idtoadd].link=certificate.certificateLink;
+    //     $Certificationstore[idtoadd].title=certificate.cettificateTitle
 
-    }
+    // }
     console.log($Certificationstore.length);
     }
 </script>
@@ -35,7 +35,7 @@
     <div class="form-container">
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <form
-    on:submit={formSubmit}
+    on:submit|preventDefault={formSubmit}
     id="certificationform"
     
 >
