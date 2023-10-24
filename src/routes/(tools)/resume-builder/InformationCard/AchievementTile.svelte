@@ -9,7 +9,7 @@
   export let link : string;
   export let idfordetail: number;
 </script>
-<div class="flex items-center justify-between rounded-2xl bg-gray-400 p-6 mb-4">
+<div class="flex items-center justify-between rounded-2xl bg-gray-400 p-4 mb-4">
   <div>
     <h1 class="inline text-lg font-semibold">{achieve} | </h1>
     {#if link !== ""}
