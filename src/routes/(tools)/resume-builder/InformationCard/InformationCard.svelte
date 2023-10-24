@@ -55,8 +55,8 @@
 {:else if $clickedBtn === "Certifications"}
     <CertificationDetailsMiddleTile/>
     {#if $Certificationstore.length > 0}
-        {#each $Certificationstore as {id, title, link} (id)}
-        <CertficationTile certificateTitle={title} certificateLink={link}/>
+        {#each $Certificationstore as {id} (id)}
+        <CertficationTile idfordetail={id}/>
         {/each}
     {/if}
 {/if}

@@ -1,8 +1,7 @@
 <script lang="ts">
 
   import CForm from "./CForm.svelte";
-  export let certificateTitle: string;
-  export let certificateLink: string;
+  import { Certificationstore } from "./Certificationstore";
   export let idfordetail: number;
   let isEditing = false;
 
@@ -14,7 +13,7 @@
 
 <div class="flex items-center justify-between rounded-2xl bg-gray-300 p-6 mb-2">
   <div>
-    <h1 class="inline text-lg font-semibold">{certificateTitle}<span class="text-base font-normal text-gray-500"> | <a href="{certificateLink}">Link</a></span></h1>
+    <h1 class="inline text-lg font-semibold">{$Certificationstore[idfordetail].title}<span class="text-base font-normal text-gray-500"> | <a href="{$Certificationstore[idfordetail].link}">Link</a></span></h1>
   </div>
   <div class="flex items-center">
     <button on:click={toggleForm} class="flex items-center rounded-lg border-2 border-black bg-transparent px-4 py-2 text-lg text-black">
