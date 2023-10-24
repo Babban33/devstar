@@ -1,26 +1,22 @@
 <script lang="ts">
   import Educationform from "./Educationform.svelte";
+  import { EducationStore } from "./EducationStore";
   let isEditing=false;
   function toggleForm()
   {
     isEditing=!isEditing;
   }
-  export let collegeName: string;
-  export let collegeCity: string;
-  export let degree: string;
-  export let cgpa: string;
-  export let startYear: string;
-  export let endYear: string;
+  export let idfordetail: number;
 </script>
 
 
 <div class="relative flex rounded-2xl bg-gray-400 font-sans mb-4">
   <div class="flex-grow">
     <div class="justify-start px-5 py-5 align-middle">
-      <div class="pb-1 font-bold">{collegeName}, {collegeCity}</div>
+      <div class="pb-1 font-bold">{$EducationStore[idfordetail].college_name}, {$EducationStore[idfordetail].city}</div>
       <div class="pb-1 text-gray-800">
-        {degree} | CGPA: {cgpa}
-        <div class="text-gray-500">{startYear} - {endYear}</div>
+        {$EducationStore[idfordetail].degree} | CGPA: {$EducationStore[idfordetail].CGPA}
+        <div class="text-gray-500">{$EducationStore[idfordetail].start_year} - {$EducationStore[idfordetail].end_year}</div>
       </div>
     </div>
   </div>
@@ -35,6 +31,6 @@
 </div>
 
 {#if isEditing}
-  <Educationform onCancel={toggleForm}/>
+  <Educationform onCancel={toggleForm} idtoadd={idfordetail}/>
 {/if}
 
