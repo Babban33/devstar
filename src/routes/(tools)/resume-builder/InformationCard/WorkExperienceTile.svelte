@@ -33,5 +33,5 @@
     </div>    
   </div>
   {#if IsEditing}
-    <WorkExperienceForm onCancel={toogleform}/>
+    <WorkExperienceForm onCancel={toogleform} idtoadd={0}/>
   {/if}

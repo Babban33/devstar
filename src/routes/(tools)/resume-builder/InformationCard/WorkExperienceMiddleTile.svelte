@@ -30,5 +30,5 @@
   </div>
 </div>
 {#if IsAdd}
-<WorkExperienceForm onCancel ={toogleform}/>
+<WorkExperienceForm onCancel ={toogleform} idtoadd={-1}/>
 {/if}

@@ -9,11 +9,15 @@
     end: "",
   };
   export let onCancel: ()=> void;
+  export let idtoadd: number;
   function formSubmit(){
     onCancel();
-    WorkExpStore.update(items =>{
-      return [...items, {id: $WorkExpStore.length, company_name: experience.company, designation: experience.job, discription_1: experience.point1, discription_2: experience.point2, start_date: experience.start, end_date: experience.end}]
-    })
+    if (idtoadd > -1)
+    {
+      WorkExpStore.update(items =>{
+        return [...items, {id: $WorkExpStore.length, company_name: experience.company, designation: experience.job, discription_1: experience.point1, discription_2: experience.point2, start_date: experience.start, end_date: experience.end}]
+      });
+    }
   }
 </script>
 
