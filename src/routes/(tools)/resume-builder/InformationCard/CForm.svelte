@@ -23,8 +23,8 @@
         });
     }
     else if(idtoadd > -1) {
-        $Certificationstore[idtoadd].certificateLink=certificate.certificateLink;
-        $Certificationstore[idtoadd].cettificateTitle=certificate.cettificateTitle
+        $Certificationstore[idtoadd].link=certificate.certificateLink;
+        $Certificationstore[idtoadd].title=certificate.cettificateTitle
 
     }
     console.log($Certificationstore.length);
@@ -59,7 +59,7 @@
             name="certificateTitle"
             class="w-full rounded-xl border border-gray-600 px-3 py-2"
             rows="2"
-            bind:value= "{$Certificationstore[idtoadd].cettificateTitle}"
+            bind:value= "{$Certificationstore[idtoadd].title}"
             placeholder="Enter your description"
         />
 
@@ -83,7 +83,7 @@
         id="certificatelink"
         name="certificatelink"
         class="w-full rounded-xl border border-gray-600 px-3 py-2"
-        bind:value={$Certificationstore[idtoadd].certificateLink}
+        bind:value={$Certificationstore[idtoadd].link}
         placeholder="Enter certificate link"
     />
 
