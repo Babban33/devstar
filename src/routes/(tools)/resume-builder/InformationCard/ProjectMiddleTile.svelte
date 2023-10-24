@@ -32,5 +32,5 @@
   </div>
 </div>
 {#if isEditing}
-<Projectform onCancel={toggleForm}/>
+<Projectform onCancel={toggleForm} idtoadd={-1}/>
 {/if}

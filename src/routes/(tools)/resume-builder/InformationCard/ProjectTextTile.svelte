@@ -1,23 +1,21 @@
 <script lang="ts">
   import Projectform from "./projectform.svelte";
+  import { projectStore } from "./projectStore";
   let isEditing=false
   function toggleForm()
-{
-  isEditing=!isEditing
-}
-export let project: string;
-export let link: string;
-export let point1: string;
-export let point2: string;
+  {
+    isEditing=!isEditing
+  }
+  export let idfordetail: number;
 </script>
 <div class="relative flex rounded-2xl bg-gray-400 font-sans mb-4">
   <div class="flex-grow">
     <div class="justify-start px-5 py-5 align-middle">
-      <div class="pb-1 font-bold">{project} | <a href="{link}" class="text-gray-600 font-normal">Link</a></div>
+      <div class="pb-1 font-bold">{$projectStore[idfordetail].projectName} | <a href="{$projectStore[idfordetail].projectLink}" class="text-gray-600 font-normal">Link</a></div>
       <div class="pb-1 text-gray-900">
         <ul class="text-gray-800 list-disc pl-5">
-          <li>{point1}</li>
-          <li>{point2}</li>
+          <li>{$projectStore[idfordetail].description1}</li>
+          <li>{$projectStore[idfordetail].description2}</li>
         </ul>
       </div>
     </div>
@@ -32,5 +30,5 @@ export let point2: string;
   </div>
 </div>
 {#if isEditing}
-<Projectform onCancel={toggleForm}/>
+<Projectform onCancel={toggleForm} idtoadd={idfordetail}/>
 {/if}
