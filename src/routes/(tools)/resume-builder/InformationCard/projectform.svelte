@@ -11,7 +11,7 @@
   export let idtoadd: number;
   function formSubmit(){
     onCancel();
-    if (idtoadd > -1)
+    if (idtoadd === -1)
     {
       projectStore.update(items => [
         ...items,
