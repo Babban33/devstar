@@ -1,7 +1,7 @@
 <script lang="ts">
     import { clickedBtn } from "../ProfileCard/ClickedButton";
     import EducationFrame from "./EducationFrame.svelte";
-    import CollegeTileText from "./CollegeTileText.svelte";
+    import EducationTextTile from "./EducationTextTile.svelte";
     import WorkExperienceMiddleTile from "./WorkExperienceMiddleTile.svelte";
     import WorkExperienceTile from "./WorkExperienceTile.svelte";
     import ProjectMiddleTile from "./ProjectMiddleTile.svelte";
@@ -23,7 +23,7 @@
     <EducationFrame/>
     {#if $EducationStore.length > 0}
         {#each $EducationStore as {id, college_name, city, degree, CGPA, start_year, end_year} (id)}
-        <CollegeTileText collegeName={college_name} collegeCity={city} degree={degree} cgpa={CGPA} startYear={start_year} endYear={end_year}/>
+        <EducationTextTile collegeName={college_name} collegeCity={city} degree={degree} cgpa={CGPA} startYear={start_year} endYear={end_year}/>
         {/each}
     {/if}
 {:else if $clickedBtn === "Work Experience"}
