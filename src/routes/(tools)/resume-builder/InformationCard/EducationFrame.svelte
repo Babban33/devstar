@@ -35,5 +35,5 @@
 </script>
 
 {#if isEditing}
-<Educationform  onCancel={educationForm}/>
+<Educationform  onCancel={educationForm} idtoadd={-1}/>
 {/if}
