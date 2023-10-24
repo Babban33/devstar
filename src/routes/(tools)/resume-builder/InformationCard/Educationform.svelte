@@ -2,9 +2,11 @@
   import { EducationStore } from "./EducationStore";
   let education={collegeName :" ", city: " ", degree: " ", cgpa: " ", startYear: " ", endYear: " "}
   export let onCancel: () => void;
+  export let idtoadd: number;
   function formSubmit(){
     onCancel();
-    EducationStore.update(items => {
+    if(idtoadd === -1){
+      EducationStore.update(items => {
       return [
         ...items,
         {
@@ -18,6 +20,7 @@
         }
       ];
     });
+    }
   }
 </script>
 <style>
@@ -48,31 +51,55 @@
         <div class="flex">
           <div class="mr-4 flex-grow sm:mr-8">
             <label for="collegename" class="mb-1 block font-bold text-gray-900">College Name</label>
-            <input bind:value={education.collegeName} type="text" id="collegename" name="collegename" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Enter college name" required />
+            {#if idtoadd > -1}
+            <input bind:value={$EducationStore[idtoadd].college_name} type="text" id="collegename" name="collegename" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Enter college name" required />
+            {:else}
+              <input bind:value={education.collegeName} type="text" id="collegename" name="collegename" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Enter college name" required />
+            {/if}
           </div>
           <div class="ml-4 flex-grow sm:ml-8">
             <label for="city" class="mb-1 block font-bold text-gray-900">City</label>
-            <input bind:value={education.city} type="text" id="city" name="city" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Enter city" required />
+            {#if idtoadd > -1}
+              <input bind:value={$EducationStore[idtoadd].city} type="text" id="city" name="city" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Enter city" required />
+            {:else}
+              <input bind:value={education.city} type="text" id="city" name="city" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Enter city" required />
+            {/if}
           </div>
         </div>
         <div class="mt-4 flex">
           <div class="mr-4 flex-grow sm:mr-8">
             <label for="degree" class="mb-1 block font-bold text-gray-900">Degree Name</label>
-            <input bind:value={education.degree} type="text" id="degree" name="degree" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Enter degree name" required />
+            {#if idtoadd > -1}
+              <input bind:value={$EducationStore[idtoadd].degree} type="text" id="degree" name="degree" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Enter degree name" required />
+            {:else}
+              <input bind:value={education.degree} type="text" id="degree" name="degree" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Enter degree name" required />
+            {/if}
           </div>
           <div class="ml-4 flex-grow sm:ml-8">
             <label for="cgpa" class="mb-1 block font-bold text-gray-900">CGPA or Percentage</label>
-            <input bind:value={education.cgpa} type="text" id="cgpa" name="cgpa" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Enter CGPA or Percentage" required/>
+            {#if idtoadd > -1}
+              <input bind:value={$EducationStore[idtoadd].CGPA} type="text" id="cgpa" name="cgpa" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Enter CGPA or Percentage" required/>
+            {:else}
+              <input bind:value={education.cgpa} type="text" id="cgpa" name="cgpa" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Enter CGPA or Percentage" required/>
+            {/if}
           </div>
         </div>
         <div class="mt-4 flex">
           <div class="mr-4 flex-grow sm:mr-8">
             <label for="startyear" class="mb-1 block font-bold text-gray-900">Start Year</label>
-            <input bind:value={education.startYear} type="date" id="startyear" name="startyear" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Select start year" required/>
+            {#if idtoadd > -1}
+              <input bind:value={$EducationStore[idtoadd].start_year} type="date" id="startyear" name="startyear" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Select start year" required/>
+            {:else}
+              <input bind:value={education.startYear} type="date" id="startyear" name="startyear" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Select start year" required/>
+            {/if}
           </div>
           <div class="ml-4 flex-grow sm:ml-8">
             <label for="endyear" class="mb-1 block font-bold text-gray-900">End Year</label>
-            <input bind:value={education.endYear} type="date" id="endyear" name="endyear" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Select end year" required/>
+            {#if idtoadd > -1}
+              <input bind:value={$EducationStore[idtoadd].end_year} type="date" id="endyear" name="endyear" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Select end year" required/>
+            {:else}
+              <input bind:value={education.endYear} type="date" id="endyear" name="endyear" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Select end year" required/>
+            {/if}
           </div>
         </div>
         <div class="mt-6 flex justify-end sm:mt-8">
