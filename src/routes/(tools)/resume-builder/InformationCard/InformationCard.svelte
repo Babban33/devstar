@@ -26,7 +26,7 @@
         <EducationTextTile idfordetail={id}/>
         {/each}
     {/if}
-{:else if $clickedBtn === "Work Experience"}
+{:else if $clickedBtn === "Experience"}
     <WorkExperienceMiddleTile/>
     {#if $WorkExpStore.length > 0}
         {#each $WorkExpStore as {id} (id)}
