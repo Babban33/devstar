@@ -15,12 +15,12 @@
         </div>
     </section>
     <section class="bg-white dark:bg-gray-900">
-        <div class="px-8 grid grid-cols-10 gap-2">
-            <div class="col-span-6">
+        <div class="px-8 lg:flex gap-2">
+            <div class="lg:flex-1">
                 <ProfileCard/>
                 <InformationCard/>
             </div>
-            <div class="col-span-4" style="margin-bottom: 20px;">
+            <div class="lg:flex-1" style="margin-bottom: 20px;">
                 <TaglineDetails/>
             </div>
         </div>

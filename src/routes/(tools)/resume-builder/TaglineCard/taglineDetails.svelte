@@ -51,7 +51,7 @@
   function downloadForm() {}
 </script>
 <div class="flex">
-  <div class="w-auto rounded-2xl bg-white p-5 text-gray-900" style="height: 700px; width: 600px;">
+  <div class="w-full rounded-2xl bg-white p-5 text-gray-900" style="height: 700px;">
     <div class="flex items-center justify-between">
       <h5 class="font-serif text-2xl font-semibold">Resume</h5>
       <button
