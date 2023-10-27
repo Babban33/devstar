@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
   import { taglineStore } from "./tagline";
   import TaglineForm from "./TaglineForm.svelte";
   let isEditing = false
@@ -46,4 +46,19 @@
 </div>
 {#if isEditing}
 <TaglineForm updatedTaglineCard={updateTaglineDetails} onCancel={toggleForm}/>
-{/if}
+{/if} -->
+<script>
+  function downloadForm() {}
+</script>
+<div class="flex">
+  <div class="w-auto rounded-2xl bg-white p-5 text-gray-900" style="height: 700px; width: 600px;">
+    <div class="flex items-center justify-between">
+      <h5 class="font-serif text-2xl font-semibold">Resume</h5>
+      <button
+        on:click={downloadForm}
+        class="inline-flex items-center gap-2 text-md font-sans rounded-xl border-2 px-4 py-2 text-gray font-light">
+        Download
+      </button>
+    </div>
+  </div>
+</div>
