@@ -1,7 +1,7 @@
 <script>
     import ProfileCard from "./ProfileCard/ProfileCard.svelte";
-    import TaglineDetails from "./TaglineCard/taglineDetails.svelte";
     import InformationCard from "./InformationCard/InformationCard.svelte";
+    import ResumeCard from "./ResumeCard/ResumeCard.svelte";
 </script>
 <div>
     <section class="bg-white dark:bg-gray-900">
@@ -21,7 +21,7 @@
                 <InformationCard/>
             </div>
             <div class="lg:flex-1" style="margin-bottom: 20px;">
-                <TaglineDetails/>
+                <ResumeCard/>
             </div>
         </div>
     </section>
