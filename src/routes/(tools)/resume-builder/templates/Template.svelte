@@ -2,6 +2,7 @@
   import { achievementStore } from "../InformationCard/AchievementStore";
 import { Certificationstore } from "../InformationCard/Certificationstore";
 import { EducationStore } from "../InformationCard/EducationStore";
+	import { SkillsStore } from "../InformationCard/SkillsStore";
 	import { projectStore } from "../InformationCard/projectStore";
 import { WorkExpStore } from "../InformationCard/workExp";
   import { profileStore } from "../ProfileCard/ProfileStore";
@@ -147,21 +148,26 @@ import { WorkExpStore } from "../InformationCard/workExp";
         </ul>
       </section>
     {/if}
-  
-    <div class="mt-6 text-xl font-bold">SKILLS</div>
-    <hr class="bor-line mb-4" />
-    <div class="mb-4 flex">
-      <div class="w-1/2 py-2">
-        <p class="font-bold">Web Development</p>
-      </div>
-      <div class="w-1/2 py-2">
-        <p class="font-bold">Data Analysis</p>
-      </div>
-      <div class="w-1/2 py-2">
-        <p class="font-bold">Sales Force</p>
-      </div>
-      <div class="w-1/2 py-2">
-        <p class="font-bold">Win & Mac OS</p>
-      </div>
-    </div>
+      
+
+    {#if $SkillsStore.techSkills.length > 0 || $SkillsStore.softSkills.length > 0}
+      <section>
+        <div class="mt-6 text-xl font-bold">SKILLS</div>
+        <hr class="bor-line mb-4" />
+        <div class="mb-2 flex">
+          {#each $SkillsStore.techSkills as Skill}
+            <div class="w-1/2 py-2">
+              <p class="font-bold">{Skill}</p>
+            </div>
+          {/each}
+        </div>
+        <div class="mb-2 flex">
+          {#each $SkillsStore.softSkills as Skill}
+            <div class="w-1/2 py-2">
+              <p class="font-bold">{Skill}</p>
+            </div>
+          {/each}
+        </div>
+      </section>
+    {/if}
   </div>
