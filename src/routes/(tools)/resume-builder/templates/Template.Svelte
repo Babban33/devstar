@@ -1,7 +1,7 @@
 <script>
   import { profileStore } from "../ProfileCard/ProfileStore";
 </script>
-<div class="rounded-lg bg-white p-6 shadow-lg mt-2">
+<div class="rounded-2xl bg-white p-6 shadow-lg mt-2">
   <section class="justify-center text-center">
     <h1 class="mb-1 text-3xl font-semibold">{$profileStore.username}</h1>
     <p class="text-lg text-blue-500">{$profileStore.designation}</p>

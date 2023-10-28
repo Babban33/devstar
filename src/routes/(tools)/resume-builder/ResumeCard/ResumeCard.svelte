@@ -49,16 +49,14 @@
 {/if} -->
 <script>
   function downloadForm() {}
+  import Template from "../templates/Template.svelte";
 </script>
 <div class="flex">
-  <div class="w-full rounded-2xl bg-white p-5 text-gray-900" style="height: 700px;">
-    <div class="flex items-center justify-between">
+  <div class="w-full rounded-2xl bg-gray-400 p-5 text-gray-900">
+    <div class="flex items-center justify-between mb-2">
       <h5 class="font-serif text-2xl font-semibold">Resume</h5>
-      <button
-        on:click={downloadForm}
-        class="inline-flex items-center gap-2 text-md font-sans rounded-xl border-2 px-4 py-2 text-gray font-light">
-        Download
-      </button>
+      <button on:click={downloadForm} class="rounded-xl bg-gray-900 px-4 py-2 font-sans font-light text-white">Download</button>
     </div>
+    <Template />
   </div>
 </div>
