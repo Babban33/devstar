@@ -1,5 +1,6 @@
 <script>
-  import { EducationStore } from "../InformationCard/EducationStore";
+  import { Certificationstore } from "../InformationCard/Certificationstore";
+import { EducationStore } from "../InformationCard/EducationStore";
 	import { projectStore } from "../InformationCard/projectStore";
 import { WorkExpStore } from "../InformationCard/workExp";
   import { profileStore } from "../ProfileCard/ProfileStore";
@@ -120,14 +121,19 @@ import { WorkExpStore } from "../InformationCard/workExp";
         {/each}
       </section>
     {/if}
-  
-    <div class="mt-6 text-xl font-bold">CERTIFICATES</div>
-    <hr class="bor-line mb-4" />
-    <ul class="mb-4 list-disc pl-6">
-      <li>Certificate 1 | <a href="example.com">Link</a></li>
-      <li>Certificate 2 | <a href="example.com">Link</a></li>
-      <li>Certificate 3 | <a href="example.com">Link</a></li>
-    </ul>
+
+
+    {#if $Certificationstore.length > 0}
+      <section>
+        <p class="mt-6 text-xl font-bold">CERTIFICATES</p>
+        <hr class="bor-line mb-4" />
+        <ul class="mb-4 list-disc pl-6">
+        {#each $Certificationstore as {id} (id)}
+          <li>{$Certificationstore[id].title} | <a href="{$Certificationstore[id].link}">Link</a></li>
+        {/each}
+        </ul>
+      </section>
+    {/if}
   
     <div class="mt-6 text-xl font-bold">KEY ACHIEVEMENTS</div>
     <hr class="bor-line mb-4" />
