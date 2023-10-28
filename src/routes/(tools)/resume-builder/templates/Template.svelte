@@ -1,12 +1,13 @@
 <script>
   import { EducationStore } from "../InformationCard/EducationStore";
+	import { projectStore } from "../InformationCard/projectStore";
 import { WorkExpStore } from "../InformationCard/workExp";
   import { profileStore } from "../ProfileCard/ProfileStore";
 </script>
 <style>
-    .dotted-line {
+    /* .dotted-line {
       border-top: 1px dotted #000;
-    }
+    } */
     .bor-line {
       border-top: 3px solid #000;
     }
@@ -39,60 +40,42 @@ import { WorkExpStore } from "../InformationCard/workExp";
       {/if}
     </section>
   
+
     {#if $WorkExpStore.length > 0}
-        <section>
-            <p class="mt-6 text-xl font-bold">EXPERIENCE</p>
-            <hr class="bor-line mb-4" />
-        
-            <!-- <div class="mb-4">
-                <div class="flex justify-between">
-                    <h2 class="text-xl font-semibold">Key Account Manager</h2>
-                    <span>
-                        <p class="flex gap-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 solid">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
-                            </svg>
-                            Jan 2016 - Ongoing
-                        </p>
-                    </span>
-                </div>
-                <p class="text-blue-500">Lauzon</p>
-                <ul class="list-disc pl-6">
-                    <li>Achieved 12% growth in the account</li>
-                    <li>Generated $2000000+ new reveue by signing 10 new accounts</li>
-                </ul>
-            </div> -->
-            {#each $WorkExpStore as {id} (id)}
-              <div class="mb-4">
-                <div class="flex justify-between">
-                  <h2 class="text-xl font-semibold">{$WorkExpStore[id].designation}</h2>
-                  <span>
-                    <p class="flex gap-1">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 solid">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
-                      </svg>
-                      {$WorkExpStore[id].start_date} - {$WorkExpStore[id].end_date}
-                    </p>
-                  </span>
-                </div>
-                <p class="text-blue-500">{$WorkExpStore[id].company_name}</p>
-                <ul class="list-disc pl-6">
-                  <li>{$WorkExpStore[id].discription_1}</li>
-                  <li>{$WorkExpStore[id].discription_2}</li>
-                </ul>
-              </div>
+      <section>
+        <p class="mt-6 text-xl font-bold">EXPERIENCE</p>
+        <hr class="bor-line mb-4" />
+
+        {#each $WorkExpStore as {id} (id)}
+          <div class="mb-4">
+            <div class="flex justify-between">
+              <h2 class="text-xl font-semibold">{$WorkExpStore[id].designation}</h2>
+              <span>
+                <p class="flex gap-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 solid">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+                  </svg>
+                  {$WorkExpStore[id].start_date} - {$WorkExpStore[id].end_date}
+                </p>
+              </span>
+            </div>
+              <p class="text-blue-500">{$WorkExpStore[id].company_name}</p>
+              <ul class="list-disc pl-6">
+                <li>{$WorkExpStore[id].discription_1}</li>
+                <li>{$WorkExpStore[id].discription_2}</li>
+              </ul>
+            </div>
             {/each}
-            <!-- {#if $WorkExpStore.length > 1 && $WorkExpStore.length < 3}
+            <!-- {#if $WorkExpStore.length == 2}
               <hr class="dotted-line mb-2" />
             {/if} -->
         </section>
     {/if}
+
+
     {#if $EducationStore.length > 0}
       <p class="mt-6 text-xl font-bold">EDUCATION</p>
       <hr class="bor-line mb-4" />
-      <!-- <h2 class="text-xl font-semibold">Master Of Marketing Management [MMM]</h2>
-      <p class="text-blue-500">Drouln S.A.R.L</p>
-       -->
       {#each $EducationStore as {id} (id)}
         <div class="mb-4">
           <div class="flex justify-between">
@@ -114,58 +97,29 @@ import { WorkExpStore } from "../InformationCard/workExp";
       {/if} -->
     {/if}
     
-  
-    <p class="mt-6 text-xl font-bold">PROJECTS</p>
-    <hr class="bor-line mb-4" />
-    <div class="mb-4">
-      <div class="flex justify-between">
-        <h2 class="text-xl font-semibold">
-          E-Commerce Website | HTML, CSS, JS
-        </h2>
-        <a href="example.com" class="mr-6">
-          Project Link
-        </a>
-      </div>
-      <ul class="list-disc pl-6">
-        <li>tes test.</li>
-        <li>test test test.</li>
-        <li>test test test.</li>
-      </ul>
-    </div>
-    <hr class="dotted-line mb-4" />
-  
-    <div class="mb-4">
-      <div class="flex justify-between">
-        <h2 class="text-xl font-semibold">
-         Test Website | HTML, CSS, JS
-        </h2>
-        <a href="example.com" class="mr-6">
-          Project Link
-        </a>
-      </div>
-      <ul class="list-disc pl-6">
-        <li>tes test.</li>
-        <li>test test test.</li>
-        <li>test test test.</li>
-      </ul>
-    </div>
-    <hr class="dotted-line mb-4" />
-  
-    <div class="mb-4">
-      <div class="flex justify-between">
-        <h2 class="text-xl font-semibold">
-         Test Website | HTML, CSS, JS
-        </h2>
-        <a href="example.com" class="mr-6">
-          Project Link
-        </a>
-      </div>
-      <ul class="list-disc pl-6">
-        <li>tes test.</li>
-        <li>test test test.</li>
-        <li>test test test.</li>
-      </ul>
-    </div>
+    
+    {#if $projectStore.length > 0}
+      <section>
+        <p class="mt-6 text-xl font-bold">PROJECTS</p>
+        <hr class="bor-line mb-4" />
+        {#each $projectStore as {id} (id)}
+          <div class="mb-4">
+            <div class="flex justify-between">
+              <h2 class="text-xl font-semibold">
+                {$projectStore[id].projectName}
+              </h2>
+              <a href="{$projectStore[id].projectLink}" class="mr-6">
+                Project Link
+              </a>
+            </div>
+            <ul class="list-disc pl-6">
+              <li>{$projectStore[id].description1}</li>
+              <li>{$projectStore[id].description2}</li>
+            </ul>
+          </div>
+        {/each}
+      </section>
+    {/if}
   
     <div class="mt-6 text-xl font-bold">CERTIFICATES</div>
     <hr class="bor-line mb-4" />
