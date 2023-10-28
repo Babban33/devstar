@@ -6,14 +6,6 @@
     {
         isEditing=!isEditing;
     }
-    /**
-	 * @param {{ techSkills: string[]; softSkills: string[]; }} updatedSkills
-	 */
-     function updateSkills(updatedSkills) {
-        SkillsStore.update(value => {
-      return {...value, ...updatedSkills};
-    });
-  }
 </script>
 <div class="mb-1 flex items-center rounded-2xl bg-gray-400 p-4">
     <div class="w-full">
@@ -46,5 +38,5 @@
     </div>
 </div>
 {#if isEditing}
-<SkillsForm updatedSkills={updateSkills} onCancel={toggleForm}/>
+<SkillsForm onCancel={toggleForm}/>
 {/if}

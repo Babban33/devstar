@@ -1,14 +1,6 @@
-<script>
+<script lang="ts">
   import {SkillsStore} from './SkillsStore';
-
-  /**
-	 * @type {() => void}
-	 */
-   export let onCancel;
-   /**
-	 * @type {(arg0: { techSkills: string[]; softSkills: string[]; }) => void}
-	 */
-  export let updatedSkills;
+  export let onCancel: () => void;
   
   let techSkillsInput = '';
   let softSkillsInput = '';
@@ -16,7 +8,7 @@
     onCancel();
     const techSkills = techSkillsInput.split(/\n|,/).map(skill => skill.trim()).filter(skill => skill !== '');
     const softSkills = softSkillsInput.split(/\n|,/).map(skill => skill.trim()).filter(skill => skill !== '');
-    updatedSkills({
+    SkillsStore.set({
       techSkills,
       softSkills,
     });
