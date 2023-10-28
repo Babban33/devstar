@@ -1,5 +1,6 @@
 <script>
-  import { Certificationstore } from "../InformationCard/Certificationstore";
+  import { achievementStore } from "../InformationCard/AchievementStore";
+import { Certificationstore } from "../InformationCard/Certificationstore";
 import { EducationStore } from "../InformationCard/EducationStore";
 	import { projectStore } from "../InformationCard/projectStore";
 import { WorkExpStore } from "../InformationCard/workExp";
@@ -135,14 +136,17 @@ import { WorkExpStore } from "../InformationCard/workExp";
       </section>
     {/if}
   
-    <div class="mt-6 text-xl font-bold">KEY ACHIEVEMENTS</div>
-    <hr class="bor-line mb-4" />
-    <ul class="mb-4 list-disc pl-6">
-      <li>Build the future - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-      <li>Managing the largest accounts - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-      <li>Market share - key accounts & projects - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-      <li>Work-life balance - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-    </ul>
+    {#if $achievementStore.length > 0}
+      <section>
+        <p class="mt-6 text-xl font-bold">ACHIEVEMENTS</p>
+        <hr class="bor-line mb-4" />
+        <ul class="mb-4 list-disc pl-6">
+          {#each $achievementStore as {id}(id)}
+            <a href="{$achievementStore[id].achievementLink}"><li>{$achievementStore[id].achievementName}</li></a>
+          {/each}
+        </ul>
+      </section>
+    {/if}
   
     <div class="mt-6 text-xl font-bold">SKILLS</div>
     <hr class="bor-line mb-4" />
