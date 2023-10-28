@@ -88,17 +88,17 @@
           <div class="mr-4 flex-grow sm:mr-8">
             <label for="startyear" class="mb-1 block font-bold text-gray-900">Start Year</label>
             {#if idtoadd > -1}
-              <input bind:value={$EducationStore[idtoadd].start_year} type="date" id="startyear" name="startyear" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Select start year" required/>
+              <input bind:value={$EducationStore[idtoadd].start_year} type="number" id="startyear" name="startyear" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Select start year" required step="1" min="1900" max="2099"/>
             {:else}
-              <input bind:value={education.startYear} type="date" id="startyear" name="startyear" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Select start year" required/>
+              <input bind:value={education.startYear} type="number" id="startyear" name="startyear" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Select start year" required step="1" min="1900" max="2099"/>
             {/if}
           </div>
           <div class="ml-4 flex-grow sm:ml-8">
             <label for="endyear" class="mb-1 block font-bold text-gray-900">End Year</label>
             {#if idtoadd > -1}
-              <input bind:value={$EducationStore[idtoadd].end_year} type="date" id="endyear" name="endyear" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Select end year" required/>
+              <input bind:value={$EducationStore[idtoadd].end_year} type="number" id="endyear" name="endyear" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Select end year" required step="1" min="1900" max="2099"/>
             {:else}
-              <input bind:value={education.endYear} type="date" id="endyear" name="endyear" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Select end year" required/>
+              <input bind:value={education.endYear} type="number" id="endyear" name="endyear" class="w-full rounded-xl border border-gray-600 px-3 py-2" placeholder="Select end year" required step="1" min="1900" max="2099"/>
             {/if}
           </div>
         </div>
